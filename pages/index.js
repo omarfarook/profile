@@ -19,8 +19,8 @@ class HomePage extends React.Component {
 		return (
       <Fragment>
         <Head>
-          <title>Medical Professional ~ Cosmic JS Next Js App</title>
-          <meta name="description" content='' />
+          <title>Omar Farook - Profile</title>
+          <meta name="description" content='My Profile' />
           <link rel="icon" type="image/png" href='' sizes="32x32" />
           <link rel="icon" type="image/png" href='' sizes="16x16" />
         </Head>
