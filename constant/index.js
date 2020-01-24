@@ -1,0 +1,8 @@
+export const MAIL_ID = 'mohamedomarfarookvm@gmail.com'
+export const PHONE_NO = '+91 7824001944'
+export const GITHUB_URL = 'https://github.com/omarfarook'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/mohamed-omar-farook-v-m-46070473/'
+export const GITHUB_NAME = 'omarfarook.github'
+export const LINKEDIN_NAME = 'omarfarook.linkedin'
+export const NAME = 'Mohamed Omar Farook'
+export const ROLE = 'Front End Developer'

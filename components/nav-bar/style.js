@@ -1,5 +1,3 @@
- 
-// import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
@@ -55,24 +53,24 @@ export const pro_pic = styled.section `
 `
 
 export const name_role = styled.section `
-text-align: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
 `
 export const name = styled.span `
-font-size: 23px;
+    font-size: 23px;
     color: white;
     text-transform: uppercase;
 `
 export const role = styled.span `
-font-size: 17px;
+    font-size: 15px;
     color: white;
     font-weight: 100;
     padding: 10px 0;
     text-transform: uppercase;
 `
 export const get_in_touch = styled.section `
-position: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
     span {

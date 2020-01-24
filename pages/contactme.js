@@ -1,24 +1,9 @@
 import React, { Fragment } from 'react';
-
-
 import Head from 'next/head';
-
 import Layout from '../components/layout'
 import ContactMe from '../components/contact-me'
 
-class AboutUsPage extends React.Component {
-
-  static async getInitialProps() {
-    return {};
-  }
-
-  constructor(props){
-    super(props);
-    
-  }
-
-	render() {
-		return (
+export default () => (
   <Fragment>
         <Head>
         <title>Omar Farook - Profile</title>
@@ -28,8 +13,4 @@ class AboutUsPage extends React.Component {
         </Head>
         <Layout><ContactMe /></Layout>
     </Fragment>
-		);
-	}
-}
-
-export default AboutUsPage;
+		)

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { FORMAL_WHITE } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
@@ -15,46 +15,46 @@ export const Body_Content = styled.section `
 `
 
 export const Home_Container = styled.section `
-display: flex;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	div {
+		height: 150px;
+		width: 150px;
+		background: black;
+		color: ${FORMAL_WHITE};
+		display: flex;
+		border-radius: 50%;
+		text-align: center;
+		vertical-align: bottom;
+		justify-content: center;
 		align-items: center;
-		flex-direction: column;
-		div {
-			height: 150px;
-			width: 150px;
-			background: black;
-			color: white;
-			display: flex;
-			border-radius: 50%;
-			text-align: center;
-			vertical-align: bottom;
-			justify-content: center;
-			align-items: center;
-			font-size: 50px;
-		}
+		font-size: 50px;
+	}
 `
 export const Name = styled.span `
-font-size: 30px;
-			margin: 5px 0;
+	font-size: 30px;
+	margin: 5px 0;
 `
 export const Role = styled.span `
-font-size: 18px;
-			margin: 5px 0;
+	font-size: 18px;
+	margin: 5px 0;
 `
 
 export const Home_Links = styled.ul `
-list-style: none;
-			align-items: center;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			padding: 15px;
-			width: 75%;
-			margin: 0 auto;
-			border-top: 1px solid grey;
-			li {
-				padding: 0 20px;
-				a {
-					color: inherit;
-				}
-			}
+	list-style: none;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 15px;
+	width: 75%;
+	margin: 0 auto;
+	border-top: 1px solid grey;
+	li {
+		padding: 0 20px;
+		a {
+			color: inherit;
+		}
+	}
 `

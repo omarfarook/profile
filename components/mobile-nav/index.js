@@ -18,7 +18,6 @@ class MobileNav extends Component {
     componentWillUnmount = () => document.removeEventListener('click', this.handleClick, false);
 
     openNav = () => {
-        console.log('clicked')
         document.getElementById("mySidenav").style.width = "75px";
     }
 
@@ -35,7 +34,7 @@ class MobileNav extends Component {
         return (
             <section>
                 <styles.Sidenav id="mySidenav" ref={node => this.node = node}>
-                    <button className="closebtn" onClick={this.closeNav}>&times;</button>
+                    <button onClick={this.closeNav}>&times;</button>
                     <ul>
                         <li onClick={this.closeNav}><Link href='/' as={'/'}><a><FaHome size={30} /></a></Link></li>
                         <li onClick={this.closeNav}><Link href='/mycv' as={'/mycv'}><a><GoFile size={30} /></a></Link></li>

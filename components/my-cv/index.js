@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import * as styles from './style' 
+import * as styles from './style'
+import {
+    MAIL_ID,
+    PHONE_NO,
+    LINKEDIN_URL,
+    LINKEDIN_NAME,
+    NAME,
+    ROLE
+} from '../../constant'
 
-const MyCv = () => (
-    <styles.Cv_Content className="cv-content">
-                <styles.Personal_Info className="personal-info">
+export default () => (
+    <styles.Cv_Content>
+                <styles.Personal_Info>
                     <div>
-                        <h1>Mohamed Omar Farook</h1>
-                        <h3>Front End Developer</h3>
+                        <h1>{NAME}</h1>
+                        <h3>{ROLE}</h3>
                     </div>
-                     <styles.Links className="links">
-                            <li>Email: <a href="mailto:mohamedomarfarookvm@gmail.com">mohamedomarfarookvm@gmail.com</a></li>
-                            <li>Phone: <a href="tel:+91 7824001944">+91 7824001944</a></li>
-                            <li>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-omar-farook-v-m-46070473/" target="_blank" rel="noopener noreferrer">omarfarook.linkedin</a></li>
+                     <styles.Links>
+                            <li>Email: <a href={'mailto:' + MAIL_ID}>{MAIL_ID}</a></li>
+                            <li>Phone: <a href={'tel:' + PHONE_NO}>{PHONE_NO}</a></li>
+                            <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_NAME}</a></li>
                         </styles.Links>
                     
                 </styles.Personal_Info>
-                <styles.Objective_Content className="title objective-content">
+                <styles.Objective_Content>
                     <h1>Career Objective</h1>
                     <p>Innovative, creative and a proven team player with 4+ years of experience
                         in designing, developing and managing complex web and mobile
                         applications and programs for various clients. I hope to share my skills,
                         expertise and experience with your team and valuable clients.</p>
                 </styles.Objective_Content>
-                <styles.Strength_Container className="title strength-content">
+                <styles.Strength_Container>
                         <h1>Strengths</h1>
                     <div>
                         <ul>
@@ -40,16 +48,16 @@ const MyCv = () => (
                         </ul>
                     </div>
                 </styles.Strength_Container>
-                <styles.Experience_Content className="title experience-content">
+                <styles.Experience_Content>
                     <h1>Work Experience</h1>
                     <div>
-                        <div className="role"><span>Sr. Frontend Developer</span> | Tata Consultancy Services</div>
-                        <styles.Duration className="duration">AUG 2015 - PRESENT</styles.Duration>
+                        <div><span>Sr. Frontend Developer</span> | Tata Consultancy Services</div>
+                        <styles.Duration>AUG 2015 - PRESENT</styles.Duration>
                         <p>IT Analyst at TCS and following are accounts/clients’ projects that I have worked upon:</p>
                     </div>
                     <div>
-                        <div className="role"><span>Sr. Frontend Developer</span> | MYER</div>
-                        <styles.Duration className="duration">Aug 2018 - Present</styles.Duration>
+                        <div><span>Sr. Frontend Developer</span> | MYER</div>
+                        <styles.Duration>Aug 2018 - Present</styles.Duration>
                         <div>
                             <ul>
                                 <li>Designs, develops and relaunches responsive e-commerce sites of the client</li>
@@ -61,8 +69,8 @@ const MyCv = () => (
                         </div>
                     </div>
                     <div>
-                        <div className="role"><span>Frontend Developer</span> | BJ's</div>
-                        <styles.Duration className="duration">Jul 2017 – Jul 2018</styles.Duration>
+                        <div><span>Frontend Developer</span> | BJ's</div>
+                        <styles.Duration>Jul 2017 – Jul 2018</styles.Duration>
                         <div>
                             <ul>
                                 <li>Design and Developed entire shopping path of Business to business application for the client.</li>
@@ -74,8 +82,8 @@ const MyCv = () => (
                         </div>
                     </div>
                     <div>
-                        <div className="role"><span>Frontend Developer</span> | DSG</div>
-                        <styles.Duration className="duration">Nov 2015 – Jun 2017</styles.Duration> 
+                        <div><span>Frontend Developer</span> | DSG</div>
+                        <styles.Duration>Nov 2015 – Jun 2017</styles.Duration> 
                         <div>
                             <ul>
                                 <li>Designs, develops and relaunches responsive B2C e-commerce sites of the client</li>
@@ -89,7 +97,7 @@ const MyCv = () => (
                         </div>
                     </div>
                 </styles.Experience_Content>
-                <styles.Education_Content className="title education-content">
+                <styles.Education_Content>
                     <h1>Education</h1>
                     <div>
                         <span>Bachelor’s Degree in Computer Science and Engineering (2011-15)</span>
@@ -98,5 +106,3 @@ const MyCv = () => (
                 </styles.Education_Content>
             </styles.Cv_Content>
 )
-
-export default MyCv

@@ -41,13 +41,13 @@ width: 80%;
     }
 `
 export const Links = styled.ul `
-display: flex;
-		flex-direction: column;
-		li a {
+	display: flex;
+	flex-direction: column;
+	li a {
 			text-decoration: none;
 			color: ${LIGHT_RED};
 			 :visited {
 				color: ${LIGHT_RED};
-			}
 		}
+	}
 `
