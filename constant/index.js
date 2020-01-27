@@ -1,4 +1,4 @@
-export const MAIL_ID = 'mohamedomarfarookvm@gmail.com'
+export const MAIL_ID = 'md.omarfarook.v.m@gmail.com'
 export const PHONE_NO = '+91 7824001944'
 export const GITHUB_URL = 'https://github.com/omarfarook'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/mohamed-omar-farook-v-m-46070473/'

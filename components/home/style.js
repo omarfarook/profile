@@ -19,8 +19,8 @@ export const Home_Container = styled.section `
 	align-items: center;
 	flex-direction: column;
 	div {
-		height: 150px;
-		width: 150px;
+		height: 125px;
+		width: 125px;
 		background: black;
 		color: ${FORMAL_WHITE};
 		display: flex;
@@ -30,6 +30,26 @@ export const Home_Container = styled.section `
 		justify-content: center;
 		align-items: center;
 		font-size: 50px;
+		img {
+			display: none;
+		}
+		span {
+			display: none;
+		}
+		@media only screen and (max-width:768px) {
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		}
+		@media only screen and (min-width:768px) {
+			span {
+				display: block;
+			}
+		}
+		
 	}
 `
 export const Name = styled.span `

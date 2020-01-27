@@ -8,7 +8,10 @@ import { MAIL_ID, PHONE_NO, LINKEDIN_URL } from '../../constant'
 export default () => (
             <styles.Body_Content>
                 <styles.Home_Container>
-                    <div>MOF</div>
+                    <div>
+                        <img src="../../static/1373.jpg" alt="dp-pic"/>
+                        <span>MOF</span>
+                    </div>
                     <styles.Name>Mohamed Omar Farook</styles.Name >
                     <styles.Role>Front End Developer</styles.Role>
                     <styles.Home_Links>
