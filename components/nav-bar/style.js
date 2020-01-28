@@ -45,14 +45,15 @@ export const pro_pic = styled.section `
     margin: 0 auto;
     padding-top: 40px;
     & img {
-        height: 200px;
-        max-width: 200px;
+        height: 150px;
+        max-width: 150px;
         width: 100%;
         border-radius: 50%;
     }
 `
 
 export const name_role = styled.section `
+    margin-top: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
