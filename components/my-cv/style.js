@@ -32,9 +32,11 @@ export const Personal_Info = styled.section `
     }
     h1 {
         color: ${LIGHT_RED};
-        font-size: 35px;
+        text-transform: uppercase;
+        font-size: 30px;
     }
     h3 {
+        text-transform: uppercase;
         font-weight: 500;
     }
     span {
@@ -69,7 +71,7 @@ export const Objective_Content = styled.section `
     p {
         font-size: 17px;
         line-height: 1.5;
-        padding-left: 30px;
+        padding-left: 15px;
         text-align: justify;
     }
     h1 {
@@ -81,6 +83,9 @@ export const Objective_Content = styled.section `
             line-height: 1.5;
             padding-left: 30px;
             text-align: justify;
+            @media only screen and (max-width: 768px) {
+                padding-left: 15px;
+            }
         }
     }
 `
@@ -118,6 +123,9 @@ export const Experience_Content = styled.section `
         line-height: 1.5;
         padding-left: 30px;
         text-align: justify;
+        @media only screen and (max-width: 768px) {
+            padding-left: 15px;
+        }
     }
 `
 export const Education_Content = styled.section `
@@ -136,6 +144,9 @@ export const Education_Content = styled.section `
             line-height: 1.5;
             padding-left: 30px;
             text-align: justify;
+            @media only screen and (max-width: 768px) {
+                padding-left: 15px;
+            }
         }
     }
 `
@@ -150,5 +161,8 @@ export const Strength_Container = styled.section `
         line-height: 1.5;
         padding-left: 30px;
         text-align: justify;
+        @media only screen and (max-width: 768px) {
+            padding-left: 15px;
+        }
     }
 `

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link'
 import { FaHome } from 'react-icons/fa'
 import { GoFile } from 'react-icons/go';
@@ -6,12 +6,6 @@ import { MdPermContactCalendar } from 'react-icons/md';
 import * as styles from './style'
 
 class MobileNav extends Component {
-
-    static async getInitialProps() {
-        document.addEventListener('mousedown', this.handleClick, false);
-
-        return
-      }
 
     componentDidMount = () => document.addEventListener('mousedown', this.handleClick, false);
 

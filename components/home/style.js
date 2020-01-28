@@ -53,11 +53,13 @@ export const Home_Container = styled.section `
 	}
 `
 export const Name = styled.span `
-	font-size: 30px;
+	text-transform: uppercase;
+	font-size: 25px;
 	margin: 5px 0;
 `
 export const Role = styled.span `
-	font-size: 18px;
+	font-size: 17px;
+	text-transform: uppercase;
 	margin: 5px 0;
 `
 
