@@ -6,7 +6,7 @@ import ContactMe from '../components/contact-me'
 export default () => (
   <Fragment>
         <Head>
-        <title>Omar Farook - Profile</title>
+        <title>my-profile.omarfarook.now.sh | Mohamed Omar Farook | Contacts</title>
           <meta name="description" content='My Profile' />
           <link rel="icon" type="image/png" href='' sizes="32x32" />
           <link rel="icon" type="image/png" href='' sizes="16x16" />

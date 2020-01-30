@@ -6,7 +6,7 @@ import Homes from '../components/home'
 export default () => (
   <Fragment>
     <Head>
-      <title>Omar Farook - Profile</title>
+      <title>my-profile.omarfarook.now.sh | Mohamed Omar Farook | Profile</title>
       <meta name="description" content='My Profile' />
       <link rel="icon" type="image/png" href='' sizes="32x32" />
       <link rel="icon" type="image/png" href='' sizes="16x16" />

@@ -53,7 +53,10 @@ export default () => (
                     <div>
                         <div><span>Sr. Frontend Developer</span> | Tata Consultancy Services</div>
                         <styles.Duration>AUG 2015 - PRESENT</styles.Duration>
-                        <p>IT Analyst at TCS and following are accounts/clients’ projects that I have worked upon:</p>
+                        <p>IT Analyst at TCS</p>
+                        <styles.Duration>AUG 2019 - NOV 2019</styles.Duration>
+                        <p>Served as Technical Spoc at Onshore location Australia</p>
+                        <p>Following are accounts/client's projects that I have worked upon:</p>
                     </div>
                     <div>
                         <div><span>Sr. Frontend Developer</span> | MYER</div>
