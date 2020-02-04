@@ -16,6 +16,14 @@ app.prepare()
   server.use(compression());
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(bodyParser.json());
+  
+  //Mailer
+  server.post('/api/contact', (req, res) => {
+    const { email, name } = req.body
+    console.log(req.body)
+    res.send('success')
+  });
+  
   server.get('*', (req, res) => handle(req, res))
   
   // server
