@@ -25,6 +25,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "compression": "^1.7.1",
+    "emailjs-com": "^2.4.1",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "next": "^5.0.0",

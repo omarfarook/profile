@@ -2,7 +2,8 @@ import styled from '@emotion/styled'
 import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
 export const Contact_Container = styled.section `
-width: 80%;
+	width: 80%;
+	height: 100vh;
 	float: right;
 	padding: 60px;
 	box-sizing: border-box;

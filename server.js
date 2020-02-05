@@ -4,7 +4,7 @@ import compression from 'compression';
 import routes from './routes';
 import bodyParser from 'body-parser';
 
-const mailer = require('./mailer');
+// const mailer = require('./mailer');
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -20,11 +20,7 @@ app.prepare()
   server.use(bodyParser.json());
   
   //Mailer
-  server.post('/api/contact', (req, res) => {
-    const { email, name } = req.body
-    console.log(req.body)
-    res.send('success')
-  });
+  
   
   server.get('*', (req, res) => handle(req, res))
   
