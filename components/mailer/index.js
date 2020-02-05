@@ -120,7 +120,7 @@ class Mailer extends Component {
                     <style.Label htmlFor="message">Message <span>*</span></style.Label>
                     <textarea
                         name="message"
-                        rows="10"
+                        rows="7"
                         id="message"
                         name="message"
                         value={message}

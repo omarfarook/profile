@@ -15,7 +15,7 @@ import {
 
 const ContactMe = () => (
     <styles.Contact_Container>
-        { /*<h2>Contact Me</h2>
+        <h2>Contact Me</h2>
         <span>I am available to be hired.</span>
         <address>
             <styles.Links>
@@ -24,7 +24,7 @@ const ContactMe = () => (
                 <li><span>LinkedIn: </span><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><span><FaLinkedin size={20} /></span>{LINKEDIN_NAME}</a></li>
                 <li><span>Github:</span><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><span><FaGithub size={20} /></span>{GITHUB_NAME}</a></li>
             </styles.Links>
-        </address> */}
+        </address>
         <Mailer />
     </styles.Contact_Container>
 )

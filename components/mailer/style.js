@@ -3,7 +3,6 @@ import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
 export const Form = styled.form `
   max-width: 450px;
-  margin: 0 auto;
   textarea {
     padding: 0px 5px;
     font-size: 15px;
