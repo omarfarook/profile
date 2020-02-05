@@ -12,7 +12,7 @@ export const Sidenav = styled.div `
 			margin: 10px 0;
 			cursor: pointer;
 			a {
-				font-size: 18px;
+				font-size: 16px;
 				color: rgba(255, 255, 255, 0.6);
 				text-decoration: none;
 				:hover {
@@ -36,7 +36,7 @@ export const Sidenav = styled.div `
 			a {
 				padding: 8px 8px 8px 8px;
 				text-decoration: none;
-				font-size: 25px;
+				font-size: 23px;
 				color: ${FORMAL_WHITE};
 				display: block;
 				transition: 0.3s;
@@ -48,7 +48,7 @@ export const Sidenav = styled.div `
 				position: absolute;
 				top: 0;
 				right: 5px;
-				font-size: 28px;
+				font-size: 25px;
 				margin-left: 50px;
 				background: transparent;
 				border-color: transparent;
@@ -59,7 +59,7 @@ export const Sidenav = styled.div `
 	@media screen and (max-height: 450px)  {
 		padding-top: 15px;
 		a {
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
 `
@@ -68,7 +68,7 @@ export const Hamburger = styled.span `
 	display: none;
 	position: absolute;
 	padding: 20px;
-	font-size: 30px;
+	font-size: 36px;
 	cursor: pointer;
     color: ${LIGHT_RED};
     @media only screen and (max-width: 768px) {

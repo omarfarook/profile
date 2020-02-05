@@ -8,12 +8,12 @@ export const Contact_Container = styled.section `
 	padding: 60px;
 	box-sizing: border-box;
 	h2 {
-		font-size: 38px;
+		font-size: 36px;
 		font-weight: 500;
 		margin: 15px 0;
 	}
 	span {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	address ul {
 		list-style: none;

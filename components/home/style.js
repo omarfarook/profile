@@ -29,7 +29,7 @@ export const Home_Container = styled.section `
 		vertical-align: bottom;
 		justify-content: center;
 		align-items: center;
-		font-size: 50px;
+		font-size: 45px;
 		img {
 			display: none;
 		}
@@ -54,11 +54,11 @@ export const Home_Container = styled.section `
 `
 export const Name = styled.span `
 	text-transform: uppercase;
-	font-size: 25px;
+	font-size: 23px;
 	margin: 5px 0;
 `
 export const Role = styled.span `
-	font-size: 17px;
+	font-size: 15px;
 	text-transform: uppercase;
 	margin: 5px 0;
 `

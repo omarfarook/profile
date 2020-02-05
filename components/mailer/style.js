@@ -6,7 +6,7 @@ export const Form = styled.form `
   margin: 0 auto;
   textarea {
     padding: 0px 5px;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.5;
     font-weight: 300;
     border-color: rgb(218, 218, 218);
@@ -28,7 +28,7 @@ export const Label = styled.label `
 export const Input = styled.input `
   height: 30px;
   padding: 0px 5px;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5;
   font-weight: 300;
   border-color: rgb(218, 218, 218);
@@ -43,8 +43,8 @@ export const SendButton = styled.div `
   height: 44px;
   background-color: ${LIGHT_RED};
   color: ${FORMAL_WHITE};
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto Light', arial;
+  font-size: 16px;
   transition: all ease 0.3s;
   :hover {
     background-color: ${FORMAL_WHITE};

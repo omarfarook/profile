@@ -15,7 +15,7 @@ export const GlobalStyle = () => (
         ul {
             list-style: none;
             display: flex;
-            font-size: 18px;
+            font-size: 16px;
             li {
                 padding: 10px;
                 color: white;
@@ -25,7 +25,7 @@ export const GlobalStyle = () => (
         body {
             margin: 0px;
             font-family: 'Roboto', sans-serif;
-            background-image: ${BG_GRADIENT};
+
         }
       `}
     />

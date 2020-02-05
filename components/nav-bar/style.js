@@ -15,7 +15,7 @@ export const navContainer = styled.div`
 		margin: 25px 0;
 		cursor: pointer;
 		a {
-			font-size: 18px;
+			font-size: 16px;
 			color: rgba(255, 255, 255, 0.6);
 			text-decoration: none;
 			&:hover {
@@ -59,12 +59,12 @@ export const name_role = styled.section `
     flex-direction: column;
 `
 export const name = styled.span `
-    font-size: 23px;
+    font-size: 22px;
     color: white;
     text-transform: uppercase;
 `
 export const role = styled.span `
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     font-weight: 100;
     padding: 10px 0;
@@ -77,7 +77,7 @@ export const get_in_touch = styled.section `
     span {
         color: rgba(255, 255, 255, 0.6);
         padding-left: 20px;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1
     }
     ul {

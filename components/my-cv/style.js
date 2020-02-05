@@ -16,7 +16,7 @@ export const Cv_Content = styled.div `
 export const Personal_Info = styled.section `
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 36px 0;
     ul {
         list-style: none;
         padding: 0;
@@ -33,11 +33,12 @@ export const Personal_Info = styled.section `
     h1 {
         color: ${LIGHT_RED};
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 26px;
     }
     h3 {
         text-transform: uppercase;
         font-weight: 500;
+        font-size: 16px;
     }
     span {
         padding: 3px;
@@ -46,7 +47,7 @@ export const Personal_Info = styled.section `
 
 export const Duration = styled.span `
     color: rgb(128, 123, 123) !important;
-    font-size: 16px;
+    font-size: 15px;
     margin: 5px 0;
     display: block;
 `
@@ -69,17 +70,17 @@ export const Links = styled.ul `
 `
 export const Objective_Content = styled.section `
     p {
-        font-size: 17px;
+        font-size: 15px;
         line-height: 1.5;
         padding-left: 15px;
         text-align: justify;
     }
     h1 {
         color: ${LIGHT_RED};
-        font-size: 25px;
+        font-size: 22px;
         margin: 0;
         ul {
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.5;
             padding-left: 30px;
             text-align: justify;
@@ -96,7 +97,7 @@ export const Title = styled.section `
 
 export const Role = styled.div `
     margin: 0;
-    font-size: 17px;
+    font-size: 15px;
 `
 
 export const Experience_Content = styled.section `
@@ -109,17 +110,17 @@ export const Experience_Content = styled.section `
     }
     p {
         margin: 0;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 15px;
         text-align: justify;
     }
     h1 {
         color: ${LIGHT_RED};
-        font-size: 25px;
+        font-size: 23px;
         margin: 0;
     }
     ul {
-        font-size: 17px;
+        font-size: 15px;
         line-height: 1.5;
         padding-left: 30px;
         text-align: justify;
@@ -133,14 +134,14 @@ export const Education_Content = styled.section `
         display: flex;
         flex-direction: column;
         margin: 15px 0px;
-        font-size: 18px;
+        font-size: 16px;
     }
     h1 {
         color: ${LIGHT_RED};
-        font-size: 25px;
+        font-size: 23px;
         margin: 0;
         ul {
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.5;
             padding-left: 30px;
             text-align: justify;
@@ -153,11 +154,11 @@ export const Education_Content = styled.section `
 export const Strength_Container = styled.section `
     h1 {
         color: ${LIGHT_RED};
-        font-size: 25px;
+        font-size: 23px;
         margin: 0;
     }
     ul {
-        font-size: 17px;
+        font-size: 15px;
         line-height: 1.5;
         padding-left: 30px;
         text-align: justify;
