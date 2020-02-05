@@ -9,6 +9,7 @@ export const Form = styled.form `
     font-size: 17px;
     line-height: 1.5;
     font-weight: 300;
+    border-color: rgb(218, 218, 218);
   }
 `
 
@@ -30,6 +31,10 @@ export const Input = styled.input `
   font-size: 17px;
   line-height: 1.5;
   font-weight: 300;
+  border-color: rgb(218, 218, 218);
+    border-width: 1px;
+    border-top-style: double;
+    border-left-style: ridge;
 `
 export const SendButton = styled.div `
   padding: 20px 0;
@@ -40,7 +45,6 @@ export const SendButton = styled.div `
   color: ${FORMAL_WHITE};
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-
   transition: all ease 0.3s;
   :hover {
     background-color: ${FORMAL_WHITE};
