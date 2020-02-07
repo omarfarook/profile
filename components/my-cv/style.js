@@ -37,7 +37,6 @@ export const Personal_Info = styled.section `
     }
     h3 {
         text-transform: uppercase;
-        font-weight: 500;
         font-size: 16px;
     }
     span {
