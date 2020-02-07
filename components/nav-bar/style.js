@@ -64,7 +64,7 @@ export const name = styled.span `
     text-transform: uppercase;
 `
 export const role = styled.span `
-    font-size: 13px;
+    font-size: 14px;
     color: white;
     font-weight: 100;
     padding: 10px 0;

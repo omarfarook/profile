@@ -25,6 +25,7 @@ export const GlobalStyle = () => (
         body {
             margin: 0px;
             font-family: 'Roboto', sans-serif;
+            font-weight: 700;
 
         }
       `}

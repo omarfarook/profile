@@ -110,7 +110,7 @@ export const Experience_Content = styled.section `
     }
     p {
         margin: 0;
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 16px;
         text-align: justify;
     }
