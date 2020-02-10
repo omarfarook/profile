@@ -59,7 +59,7 @@ export default () => (
                         <p>Following are accounts/client's projects that I have worked upon:</p>
                     </div>
                     <div>
-                        <div><span>Sr. Frontend Developer</span> | MYER</div>
+                        <div><span>Sr. Frontend Developer</span> | Leading Australian Retailer</div>
                         <styles.Duration>Aug 2018 - Present</styles.Duration>
                         <div>
                             <ul>
@@ -72,7 +72,7 @@ export default () => (
                         </div>
                     </div>
                     <div>
-                        <div><span>Frontend Developer</span> | BJ's</div>
+                        <div><span>Frontend Developer</span> | Leading US Retailer</div>
                         <styles.Duration>Jul 2017 – Jul 2018</styles.Duration>
                         <div>
                             <ul>
@@ -85,7 +85,7 @@ export default () => (
                         </div>
                     </div>
                     <div>
-                        <div><span>Frontend Developer</span> | DSG</div>
+                        <div><span>Frontend Developer</span> | Leading US Retailer</div>
                         <styles.Duration>Nov 2015 – Jun 2017</styles.Duration> 
                         <div>
                             <ul>
