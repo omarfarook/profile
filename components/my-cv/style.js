@@ -1,16 +1,35 @@
 import styled from '@emotion/styled'
 import { LIGHT_RED } from '../../constant/style'
 
-export const Cv_Content = styled.div `
+export const cv_body = styled.div `
+    background: rgb(204,204,204); 
+  `
+  export const cv_page = styled.div `
+    background: white;
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    width: 21cm;
+    height: 29.7cm;
+    @media only screen and (max-width:768px) {
+        width: auto;
+        height: auto;
+        margin: 0;
+        box-shadow: none;
+    }
+  `
+
+
+  export const Cv_Content = styled.div `
     width: 80%;
 	float: right;
 	display: flex;
 	flex-flow: column;
-	padding: 0 20px;
     box-sizing: border-box;
     @media only screen and (max-width:768px) {
         width: 100%;
-        padding: 20px;
     }
 `
 export const Personal_Info = styled.section `
@@ -166,3 +185,4 @@ export const Strength_Container = styled.section `
         }
     }
 `
+

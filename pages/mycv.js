@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import MyCv from '../components/my-cv'
+import Progress from '../components/progress-bar'
 
 import Head from 'next/head';
 
 export default () => (
-  <Fragment>
+  <Progress>
     <Head>
     <title>my-profile.omarfarook.now.sh | Mohamed Omar Farook | CV</title>
       <meta name="description" content='My Profile' />
@@ -13,5 +14,5 @@ export default () => (
       <link rel="icon" type="image/png" href='' sizes="16x16" />
     </Head>
     <Layout><MyCv /></Layout>
-  </Fragment>
+  </Progress>
 )

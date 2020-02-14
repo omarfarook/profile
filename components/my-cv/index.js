@@ -11,7 +11,9 @@ import {
 
 export default () => (
     <styles.Cv_Content>
-                <styles.Personal_Info>
+        <styles.cv_body>
+        <styles.cv_page>
+        <styles.Personal_Info>
                     <div>
                         <h1>{NAME}</h1>
                         <h3>{ROLE}</h3>
@@ -58,8 +60,7 @@ export default () => (
                         <p>Served as Technical Spoc at Onshore location Australia</p>
                         <p>Following are accounts/client's projects that I have worked upon:</p>
                     </div>
-                    <div>
-                        <div><span>Sr. Frontend Developer</span> | Leading Australian Retailer</div>
+                    <div><span>Sr. Frontend Developer</span> | Leading Australian Retailer</div>
                         <styles.Duration>Aug 2018 - Present</styles.Duration>
                         <div>
                             <ul>
@@ -70,8 +71,12 @@ export default () => (
                                 <li>Oversees creation and maintenance of front-end standard documents</li>
                             </ul>
                         </div>
-                    </div>
-                    <div>
+                    </styles.Experience_Content>
+                    
+        </styles.cv_page>
+        <styles.cv_page>
+                        <styles.Experience_Content>
+                        <div>
                         <div><span>Frontend Developer</span> | Leading US Retailer</div>
                         <styles.Duration>Jul 2017 – Jul 2018</styles.Duration>
                         <div>
@@ -107,5 +112,7 @@ export default () => (
                         <span>Anna University, Chennai, Tamil Nadu.</span>
                     </div>
                 </styles.Education_Content>
-            </styles.Cv_Content>
+                    </styles.cv_page>
+    </styles.cv_body>
+    </styles.Cv_Content>
 )
