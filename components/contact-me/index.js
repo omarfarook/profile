@@ -16,7 +16,9 @@ import {
 const ContactMe = () => (
     <styles.Contact_Container>
         <h2>Contact Me</h2>
-        <span>I am available to be hired.</span>
+        <span>I am available to be hired.I’m currently looking for new projects from April 2020.</span>
+        <span>Fill up the form below or send an email to <a href={'mailto:' + MAIL_ID}>md.omarfarook.v.m@gmail.com</a>  and ~let's talk.</span>
+        <Mailer />
         <address>
             <styles.Links>
                 <li><span>E-mail: </span><a href={'mailto:' + MAIL_ID}><span><IoIosMail size={20} /></span>{MAIL_ID}</a></li>
@@ -25,7 +27,6 @@ const ContactMe = () => (
                 <li><span>Github:</span><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><span><FaGithub size={20} /></span>{GITHUB_NAME}</a></li>
             </styles.Links>
         </address>
-        <Mailer />
     </styles.Contact_Container>
 )
 

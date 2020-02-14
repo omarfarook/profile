@@ -11,6 +11,7 @@ const dev = process.env.NODE_ENV !== 'production'
 
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
+// app.use(express.static(path.join('static')));
 
 app.prepare()
 .then(() => {
@@ -18,9 +19,6 @@ app.prepare()
   server.use(compression());
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(bodyParser.json());
-  
-  //Mailer
-  
   
   server.get('*', (req, res) => handle(req, res))
   
