@@ -27,7 +27,6 @@ export default () => (
                 <li><Link href='/' as="/"><a>Home <span><IoIosArrowForward size={15} /></span></a></Link></li>
                 <li><Link href='/mycv' as="/mycv"><a>my CV<span><IoIosArrowForward size={15} /></span></a></Link></li>
                 <li><Link href='/contactme' as="contactme"><a>Contact Me<span><IoIosArrowForward size={15} /></span></a></Link></li>
-                <li> <a href="https://my-profile.omarfarook.now.sh/static/resume-mvm.pdf" download>Download Resume</a></li>
             </ul>
             <styles.get_in_touch>
                 <span>GET IN TOUCH</span>
