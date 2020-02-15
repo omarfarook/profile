@@ -17,12 +17,6 @@ app.prepare()
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(bodyParser.json());
 
-  server.get('/download', function(req, res){
-    console.log(__dirname)
-    var file = __dirname + '/static/resume-mvm.pdf';
-    res.download(file);
-  })
-
   server.get('*', (req, res) => handle(req, res))
   
   // server
