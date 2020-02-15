@@ -4,15 +4,11 @@ import compression from 'compression';
 import routes from './routes';
 import bodyParser from 'body-parser';
 
-// const mailer = require('./mailer');
-
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
-// app.use(express.static(path.join('static')));
-app.use(express.static('static'))
 
 app.prepare()
 .then(() => {
@@ -20,7 +16,13 @@ app.prepare()
   server.use(compression());
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(bodyParser.json());
-  
+
+  server.get('/download', function(req, res){
+    console.log(__dirname)
+    var file = __dirname + '/static/resume-mvm.pdf';
+    res.download(file);
+  })
+
   server.get('*', (req, res) => handle(req, res))
   
   // server
