@@ -66,9 +66,9 @@ export const Sidenav = styled.div `
 
 export const Hamburger = styled.span `
 	display: none;
-	position: absolute;
-	padding: 20px;
-	font-size: 36px;
+	position: fixed;
+	padding: 15px;
+	font-size: 30px;
 	cursor: pointer;
     color: ${LIGHT_RED};
     @media only screen and (max-width: 768px) {

@@ -120,14 +120,15 @@ export const Role = styled.div `
 
 export const Experience_Content = styled.section `
     div {
-        margin-top: 10px;
+        margin-top: 30px !important;
         
         span {
             color: ${LIGHT_RED};
+            margin-bottom: 15px;
         }
     }
     p {
-        margin: 0;
+        margin: 0 !important;
         font-size: 16px;
         margin-bottom: 16px;
         text-align: justify;
