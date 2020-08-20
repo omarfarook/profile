@@ -54,7 +54,7 @@ export default () => (
                 <styles.Experience_Content>
                     <h1>Work Experience</h1>
                     <div>
-                        <div><span>Sr. Lead Frontend Developer</span> | Aspire Digital Technologies</div>
+                        <div><span>Technical Lead</span> | Aspire Digital Technologies</div>
                         <styles.Duration>MAR 2020 - Present</styles.Duration>
                         <div><span>IT Analyst</span> | Tata Consultancy Services</div>
                         <styles.Duration>AUG 2015 - MAR 2020</styles.Duration>
@@ -82,7 +82,7 @@ and static pages.</li>
                     <li>Lead the projects with a team of backend engineers and QA from planning to website launch.</li>
                             <li>Oversees creation and maintenance of front-end standard documents</li>
                     </ul>
-                <div><span>Sr. Lead Frontend Developer</span> | Leading Australian Retailer</div>
+                <div><span>Technical Lead</span> | Leading Australian Retailer</div>
                     <styles.Duration>Aug 2018 - MAR 2020</styles.Duration>
                     <div>
                         <ul>

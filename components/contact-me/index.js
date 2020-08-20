@@ -16,7 +16,7 @@ import {
 const ContactMe = () => (
     <styles.Contact_Container>
         <h2>Contact Me</h2>
-        <span>I am available to be hired.I’m currently looking for new projects from April 2020.</span>
+        <span>I am available to be hired.I’m currently looking for new opertunity.</span>
         <span>Fill up the form below or send an email to <a href={'mailto:' + MAIL_ID}>md.omarfarook.v.m@gmail.com</a>  and ~let's talk.</span>
         <Mailer />
         <address>
