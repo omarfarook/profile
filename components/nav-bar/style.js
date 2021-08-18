@@ -3,6 +3,7 @@ import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
 export const navContainer = styled.div`
     width: 20%;
+    padding: 0 20px;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -25,6 +26,12 @@ export const navContainer = styled.div`
 				}
 			}
 		}
+        .active {
+            color: ${FORMAL_WHITE};
+				span {
+					display: inline;
+				}
+        }
 		span {
 			position: absolute;
 			display: none;
@@ -45,11 +52,14 @@ export const pro_pic = styled.section `
     margin: 0 auto;
     padding-top: 40px;
     & img {
-        height: 150px;
-        max-width: 150px;
-        width: 100%;
+        height: 125px;
+        width: 125px;
         border-radius: 50%;
     }
+`
+
+export const links = styled.ul `
+    padding: 0;
 `
 
 export const name_role = styled.section `
@@ -74,6 +84,7 @@ export const get_in_touch = styled.section `
     position: absolute;
     bottom: 0;
     width: 100%;
+    left: 0;
     span {
         color: rgba(255, 255, 255, 0.6);
         padding-left: 20px;
@@ -88,9 +99,8 @@ export const get_in_touch = styled.section `
         display: flex;
         justify-content: space-evenly;
         padding: 0;
-
-        li {
-            padding: 0;
-            margin: 0;
+        margin-top: 0;
+        li:first-of-type {
+            padding-left: 0;
         }
     }`

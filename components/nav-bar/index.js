@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link'
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosMail } from 'react-icons/io';
@@ -14,8 +14,15 @@ import {
     ROLE
 } from '../../constant'
 
-export default () => (
-    <styles.navContainer>
+import Router from 'next-routes';
+
+export default () => {
+const router = Router()
+let path = '/'
+if(!!router && router.Router && router.Router.router && router.Router.router.asPath) {
+    path = router.Router.router.asPath
+}
+    return (<styles.navContainer>
         <styles.pro_pic>
            <img src="../../static/1373.jpg" alt="dp" />
            </styles.pro_pic>
@@ -23,11 +30,11 @@ export default () => (
                 <styles.name>{NAME}</styles.name>
                 <styles.role>{ROLE}</styles.role>
             </styles.name_role>
-            <ul>
-                <li><Link href='/' as="/"><a>Home <span><IoIosArrowForward size={15} /></span></a></Link></li>
-                <li><Link href='/mycv' as="/mycv"><a>my CV<span><IoIosArrowForward size={15} /></span></a></Link></li>
-                <li><Link href='/contactme' as="contactme"><a>Contact Me<span><IoIosArrowForward size={15} /></span></a></Link></li>
-            </ul>
+            <styles.links>
+                <li><Link href='/' as="/"><a className={path == "/" ? "active" : ""}>Home <span><IoIosArrowForward size={15} /></span></a></Link></li>
+                <li><Link href='/mycv' as="/mycv"><a className={path == "/mycv" ? "active" : ""}>my CV<span><IoIosArrowForward size={15} /></span></a></Link></li>
+                <li><Link href='/contactme' as="contactme"><a className={path == "/contactme" ? "active" : ""}>Contact Me<span><IoIosArrowForward size={15} /></span></a></Link></li>
+            </styles.links>
             <styles.get_in_touch>
                 <span>GET IN TOUCH</span>
                 <ul>
@@ -38,5 +45,5 @@ export default () => (
                 </ul>
                
             </styles.get_in_touch>
-    </styles.navContainer>
-)
+    </styles.navContainer>)
+}
