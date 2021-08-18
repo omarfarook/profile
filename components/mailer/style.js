@@ -2,7 +2,12 @@ import styled from '@emotion/styled'
 import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
 export const Form = styled.form `
-  max-width: 450px;
+  width: 100%;
+  max-width: 625px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
   textarea {
     padding: 0px 5px;
     font-size: 15px;
@@ -10,11 +15,24 @@ export const Form = styled.form `
     font-weight: 300;
     border-color: rgb(218, 218, 218);
   }
+  .field-one {
+    width: 45%;
+    padding-right: 20px;
+    flex-grow: 1;
+  }
+  .field-two {
+    width: 45%;
+    flex-grow: 1;
+  }
+  .field-three {
+    width: 100%;
+  }
 `
 
 export const InputField = styled.div `
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
   textarea {
     transition: box-shadow .35s ease,border-color .35s ease;
     font-size: 1rem;
@@ -74,13 +92,16 @@ export const Input = styled.input `
 export const SendButton = styled.div `
   padding: 20px 0;
   input {
-    width: 200px;
-  height: 44px;
-  background-color: ${LIGHT_RED};
-  color: ${FORMAL_WHITE};
-  font-family: 'Roboto Light', arial;
-  font-size: 16px;
-  transition: all ease 0.3s;
+    width: 150px;
+    height: 44px;
+    background-color: ${LIGHT_RED};
+    color: white;
+    font-family: 'Roboto Light',arial;
+    font-size: 16px;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    border: 1px solid ${LIGHT_RED};
+    border-radius: 30px;
   :hover {
     background-color: ${FORMAL_WHITE};
     color: ${LIGHT_RED} ;

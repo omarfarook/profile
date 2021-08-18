@@ -24,8 +24,9 @@ export const GlobalStyle = () => (
     }
         body {
             margin: 0px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 800;
+            font-family: Rubik,sans-serif;
+            font-size: 16px;
+            font-weight: 300;
 
         }
       `}

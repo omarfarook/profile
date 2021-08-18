@@ -45,7 +45,7 @@ class Mailer extends Component {
 
             var templateParams = {
                 from: emailid,
-                subject: subject,
+                subject: `Message from ${subject}`,
                 body: message
               };
 
@@ -91,20 +91,9 @@ class Mailer extends Component {
 
         return(
             <style.Form onSubmit={this.sendMail}>
-                <h1>Get In Touch</h1>
-                <style.InputField>
-                    <style.Label htmlFor="emailid">Email ID <span>*</span></style.Label>
-                    <style.Input
-                        type="email"
-                        id="eailid"
-                        name="emailid"
-                        value={emailid}
-                        onChange={this.updateState}
-                        required
-                    />
-                </style.InputField>
-                <style.InputField>
-                    <style.Label htmlFor="Subject">Subject <span>*</span></style.Label>
+                {/* <h1>Get In Touch</h1> */}
+                <style.InputField className="field-one">
+                <style.Label htmlFor="Subject">Name <span>*</span></style.Label>
                     <style.Input
                         type="text"
                         id="subject"
@@ -114,7 +103,18 @@ class Mailer extends Component {
                         required
                     />
                 </style.InputField>
-                <style.InputField>
+                <style.InputField className="field-two">
+                <style.Label htmlFor="emailid">Email <span>*</span></style.Label>
+                    <style.Input
+                        type="email"
+                        id="eailid"
+                        name="emailid"
+                        value={emailid}
+                        onChange={this.updateState}
+                        required
+                    />
+                </style.InputField>
+                <style.InputField className="field-three">
                     <style.Label htmlFor="message">Message <span>*</span></style.Label>
                     <textarea
                         name="message"

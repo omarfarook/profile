@@ -52,3 +52,8 @@ export const Links = styled.ul `
 		}
 	}
 `
+
+export const Content = styled.div `
+	max-width: 625px;
+	margin: 0 auto;
+`
