@@ -97,7 +97,6 @@ class Mailer extends Component {
                     <style.Input
                         type="email"
                         id="eailid"
-                        placeholder="Enter Email Id"
                         name="emailid"
                         value={emailid}
                         onChange={this.updateState}
@@ -109,7 +108,6 @@ class Mailer extends Component {
                     <style.Input
                         type="text"
                         id="subject"
-                        placeholder="Enter Subject"
                         name="subject"
                         value={subject}
                         onChange={this.updateState}
@@ -120,7 +118,7 @@ class Mailer extends Component {
                     <style.Label htmlFor="message">Message <span>*</span></style.Label>
                     <textarea
                         name="message"
-                        rows="7"
+                        rows="5"
                         id="message"
                         name="message"
                         value={message}

@@ -12,7 +12,7 @@ export const navContainer = styled.div`
     & ul li {
 		position: relative;
 		list-style: none;
-		padding: 0 20px;
+		padding: 0 10px;
 		margin: 25px 0;
 		cursor: pointer;
 		a {
@@ -28,9 +28,23 @@ export const navContainer = styled.div`
 		}
         .active {
             color: ${FORMAL_WHITE};
-				span {
-					display: inline;
-				}
+            span {
+                display: inline;
+            }
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 9px solid transparent;
+                border-bottom: 9px solid transparent;
+                border-right: 8px solid #fff;
+                bottom: 6px;
+                left: auto;
+                right: -20px;
+            }
+            
         }
 		span {
 			position: absolute;
@@ -96,12 +110,14 @@ export const get_in_touch = styled.section `
     ul {
         list-style: none;
         display: flex;
-        padding: 0;
+        justify-content: flex-start;
+        padding-left: 20px;
         list-style: none;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0;
         margin-top: 0;
+        li {
+            margin: 15px 0;
+        }
         li:first-of-type {
             padding-left: 0;
         }

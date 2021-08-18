@@ -15,6 +15,28 @@ export const Form = styled.form `
 export const InputField = styled.div `
   display: flex;
   flex-direction: column;
+  textarea {
+    transition: box-shadow .35s ease,border-color .35s ease;
+    font-size: 1rem;
+    padding: 15px;
+    -webkit-appearance: none;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+    font-family: Rubik,sans-serif;
+    font-weight: 300;
+    width: 100%;
+    outline: 0;
+    box-sizing: border-box;
+    &:hover {
+      border-color: #888;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+    }
+    &:focus {
+      border-color: #888;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+    }
+  }
 `
 
 export const Label = styled.label `
@@ -25,15 +47,29 @@ export const Label = styled.label `
 `
 
 export const Input = styled.input `
-  height: 30px;
-  padding: 0px 5px;
-  font-size: 15px;
-  line-height: 1.5;
+  
+  height: 50px;
+  transition: box-shadow .35s ease,border-color .35s ease;
+  font-size: 1rem;
+  padding: 15px;
+  -webkit-appearance: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+  font-family: Rubik,sans-serif;
   font-weight: 300;
-  border-color: rgb(218, 218, 218);
-    border-width: 1px;
-    border-top-style: double;
-    border-left-style: ridge;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  &:hover {
+    border-color: #888;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  }
+  &:focus {
+    border-color: #888;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  }
+    
 `
 export const SendButton = styled.div `
   padding: 20px 0;
