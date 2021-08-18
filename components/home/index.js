@@ -9,7 +9,7 @@ export default () => (
             <styles.Body_Content>
                 <styles.Home_Container>
                     <div>
-                        <img src="../../static/1373.jpg" alt="dp-pic"/>
+                        <img src="../../static/dp2.jpg" alt="dp-pic"/>
                         <span>MOF</span>
                     </div>
                     <styles.Name>Mohamed Omar Farook</styles.Name >
