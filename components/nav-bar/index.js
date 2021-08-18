@@ -24,7 +24,7 @@ if(!!router && router.Router && router.Router.router && router.Router.router.asP
 }
     return (<styles.navContainer>
         <styles.pro_pic>
-           <img src="../../static/1373.jpg" alt="dp" />
+           <img src="../../static/dp2.jpg" alt="dp" />
            </styles.pro_pic>
            <styles.name_role>
                 <styles.name>{NAME}</styles.name>

@@ -55,6 +55,8 @@ export const pro_pic = styled.section `
         height: 125px;
         width: 125px;
         border-radius: 50%;
+        object-fit: cover;
+        object-position: center right;
     }
 `
 
