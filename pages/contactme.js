@@ -5,7 +5,7 @@ import ContactMe from '../components/contact-me'
 import Progress from '../components/progress-bar'
 
 export default () => (
-  <Progress>
+  <Fragment>
         <Head>
         <title>my-profile.omarfarook.now.sh | Mohamed Omar Farook | Contacts</title>
           <meta name="description" content='My Profile' />
@@ -13,5 +13,5 @@ export default () => (
           <link rel="icon" type="image/png" href='' sizes="16x16" />
         </Head>
         <Layout><ContactMe /></Layout>
-    </Progress>
+    </Fragment>
 		)

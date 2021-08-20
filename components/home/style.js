@@ -1,14 +1,15 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE } from '../../constant/style'
+import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
-	width: 80%;
+	width: 77%;
 	float: right;
 	height: 100vh;
-	justify-content: center;
-    align-items: center;
-    
+	ustify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
     @media only screen and (max-width:768px) {
         width: 100%
     }
@@ -16,8 +17,17 @@ export const Body_Content = styled.section `
 
 export const Home_Container = styled.section `
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+	max-width: 625px;
+    align-items: flex-start;
+	color: ${FORMAL_WHITE};
+    z-index: 9998;
+	padding-top: 8rem;
+    display: block;
+    padding-left: 3rem;
+	p {
+		font-size: 1.5rem;
+	}
 	div {
 		height: 125px;
 		width: 125px;
@@ -81,4 +91,28 @@ export const Home_Links = styled.ul `
 			color: inherit;
 		}
 	}
+`
+
+export const AboutButton = styled.button `
+	padding: 15px 20px;
+	background: transparent;
+	cursor: pointer	;
+	color: white;
+	border: 1px solid ${FORMAL_WHITE};
+	text-transform: uppercase;
+	font-weight: 500;
+	text-decoration: none;
+	opacity: .8;
+	box-shadow: 1px 1px 2px rgb(0 0 0 / 47%);
+	margin: 5rem 0;
+	font-size: 1rem;
+    &:hover {
+		opacity: 1;
+   }
+//   @media only screen and (max-width:768px) {
+//     display: flex;
+//     input {
+//       margin: 0 auto;
+//     }
+//   }
 `

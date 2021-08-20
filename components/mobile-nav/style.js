@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { FORMAL_WHITE, LIGHT_RED_NAV, LIGHT_RED } from '../../constant/style'
 
 export const Sidenav = styled.div `
 	display: none;
+	z-index: 9999;
 	ul {
 		padding: 0;
 		margin: 0;
@@ -26,10 +27,10 @@ export const Sidenav = styled.div `
 		height: 100%;
 			width: 0;
 			position: fixed;
-			z-index: 1;
+			z-index: 9999;
 			top: 0;
 			left: 0;
-			background-color: ${LIGHT_RED};
+			background-color: ${LIGHT_RED_NAV};
 			overflow-x: hidden;
 			transition: 0.5s;
 			padding-top: 60px;
@@ -71,6 +72,7 @@ export const Hamburger = styled.span `
 	font-size: 30px;
 	cursor: pointer;
     color: ${LIGHT_RED};
+	z-index: 9999;
     @media only screen and (max-width: 768px) {
         display: block;
     }

@@ -3,6 +3,7 @@ import { LIGHT_RED } from '../../constant/style'
 
 export const cv_body = styled.div `
     background: rgb(204,204,204); 
+    z-index: 9998;
   `
   export const cv_page = styled.div `
     background: white;
@@ -23,11 +24,24 @@ export const cv_body = styled.div `
 
 
   export const Cv_Content = styled.div `
-    width: 80%;
+    width: 77%;
+    box-sizing: border-box;
 	float: right;
 	display: flex;
 	flex-flow: column;
     box-sizing: border-box;
+    &::before {
+        position: fixed;
+        width: 23%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        content: " ";
+        display: block;
+        background: url(../../static/bg.jpg) top center no-repeat #bababa;
+        background-size: cover;
+    }
     @media only screen and (max-width:768px) {
         width: 100%;
     }

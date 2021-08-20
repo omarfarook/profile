@@ -8,6 +8,7 @@ export const Form = styled.form `
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  padding-top: 20px;
   textarea {
     padding: 0px 5px;
     font-size: 15px;
@@ -19,10 +20,18 @@ export const Form = styled.form `
     width: 45%;
     padding-right: 20px;
     flex-grow: 1;
+    @media only screen and (max-width:768px) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
   .field-two {
     width: 45%;
     flex-grow: 1;
+    @media only screen and (max-width:768px) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
   .field-three {
     width: 100%;

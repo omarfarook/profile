@@ -1,14 +1,16 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { FORMAL_WHITE, LIGHT_RED_NAV } from '../../constant/style'
 
 export const navContainer = styled.div`
-    width: 20%;
+    width: 23%;
     padding: 0 20px;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-    background: ${LIGHT_RED};
+    background: ${LIGHT_RED_NAV};
+    box-sizing: border-box; 
+    z-index: 9999;
     & ul li {
 		position: relative;
 		list-style: none;
@@ -58,10 +60,6 @@ export const navContainer = styled.div`
             display: none;
         }
 `
-
-
-
-
 export const pro_pic = styled.section `
     margin: 0 auto;
     padding-top: 40px;
@@ -73,28 +71,25 @@ export const pro_pic = styled.section `
         object-position: center right;
     }
 `
-
 export const links = styled.ul `
     padding: 0;
 `
-
 export const name_role = styled.section `
     margin-top: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
 `
-export const name = styled.span `
-    font-size: 22px;
+export const name = styled.h2 `
+    font-size: 1.5rem;
     color: white;
     text-transform: uppercase;
 `
-export const role = styled.span `
-    font-size: 14px;
+export const role = styled.p `
     color: white;
-    font-weight: 100;
-    padding: 10px 0;
     text-transform: uppercase;
+    margin: 0;
+    font-size: 1.1rem;
 `
 export const get_in_touch = styled.section `
     position: absolute;
@@ -121,4 +116,12 @@ export const get_in_touch = styled.section `
         li:first-of-type {
             padding-left: 0;
         }
-    }`
+    }
+`
+export const download_link = styled.p `
+    color: ${FORMAL_WHITE};
+    font-size: 1rem;
+    text-decoration: underline;
+    padding-left: 0.7rem;
+    cursor: pointer;
+`
