@@ -14,7 +14,7 @@ const ContactMe = () => (
     <styles.Contact_Container>
         <styles.Content>
         <h2>Contact Me</h2>
-        <p>I am available to be hired.I’m currently looking for new opertunity. Fill up the form below or send an email to <a href={'mailto:' + MAIL_ID}>md.omarfarook.v.m@gmail.com</a>  and ~let's talk.</p>
+        <p>I am available to be hired.I’m currently looking for new opportunity. Fill up the form below or send an email to <a href={'mailto:' + MAIL_ID}>md.omarfarook.v.m@gmail.com</a>  and ~let's talk.</p>
         </styles.Content>
             <Mailer />
     </styles.Contact_Container>
