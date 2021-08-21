@@ -28,41 +28,6 @@ export const Home_Container = styled.section `
 	p {
 		font-size: 1.5rem;
 	}
-	div {
-		height: 125px;
-		width: 125px;
-		background: black;
-		color: ${FORMAL_WHITE};
-		display: flex;
-		border-radius: 50%;
-		text-align: center;
-		vertical-align: bottom;
-		justify-content: center;
-		align-items: center;
-		font-size: 45px;
-		img {
-			display: none;
-		}
-		span {
-			display: none;
-		}
-		@media only screen and (max-width:768px) {
-			img {
-				display: block;
-				width: 100%;
-				height: 100%;
-				border-radius: 50%;
-				object-fit: cover;
-        		object-position: center right;
-			}
-		}
-		@media only screen and (min-width:768px) {
-			span {
-				display: block;
-			}
-		}
-		
-	}
 `
 export const Name = styled.span `
 	text-transform: uppercase;
@@ -93,9 +58,14 @@ export const Home_Links = styled.ul `
 	}
 `
 
+export const Btn_Group = styled.div `
+	margin: 5rem 0
+`
+
 export const AboutButton = styled.button `
 	padding: 15px 20px;
 	background: transparent;
+	display: block;
 	cursor: pointer	;
 	color: white;
 	border: 1px solid ${FORMAL_WHITE};
@@ -104,15 +74,9 @@ export const AboutButton = styled.button `
 	text-decoration: none;
 	opacity: .8;
 	box-shadow: 1px 1px 2px rgb(0 0 0 / 47%);
-	margin: 5rem 0;
+	margin: 2rem 0;
 	font-size: 1rem;
     &:hover {
 		opacity: 1;
    }
-//   @media only screen and (max-width:768px) {
-//     display: flex;
-//     input {
-//       margin: 0 auto;
-//     }
-//   }
 `

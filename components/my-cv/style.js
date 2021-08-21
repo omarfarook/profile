@@ -4,6 +4,9 @@ import { LIGHT_RED } from '../../constant/style'
 export const cv_body = styled.div `
     background: rgb(204,204,204); 
     z-index: 9998;
+    .font-bold {
+        font-weight: 400;
+    }
   `
   export const cv_page = styled.div `
     background: white;
@@ -47,6 +50,7 @@ export const cv_body = styled.div `
     }
 `
 export const Personal_Info = styled.section `
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 36px 0;
@@ -82,12 +86,15 @@ export const Duration = styled.span `
     font-size: 16px;
     margin: 5px 0;
     display: block;
+    font-weight: 400;
 `
 export const Links = styled.ul `
     display: flex;
     flex-direction: column;
+    margin: 5px !important;
     li a {
         text-decoration: none;
+        font-weight: 400;
         color: ${LIGHT_RED};
          :visited {
             color: ${LIGHT_RED};
@@ -97,7 +104,7 @@ export const Links = styled.ul `
         text-align: center;
     }
     @media only screen and (min-width: 768px) {
-    align-self: flex-end;
+    // align-self: flex-end;
 }
 `
 export const Objective_Content = styled.section `
@@ -133,6 +140,9 @@ export const Role = styled.div `
 `
 
 export const Experience_Content = styled.section `
+    .experience {
+        font-weight: 400;
+    }
     div {
         margin-top: 30px !important;
         
@@ -163,6 +173,7 @@ export const Experience_Content = styled.section `
     }
 `
 export const Education_Content = styled.section `
+    line-height: 1.5;
     div {
         display: flex;
         flex-direction: column;
@@ -183,6 +194,15 @@ export const Education_Content = styled.section `
             }
         }
     }
+    a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-weight: 400;
+        color: ${LIGHT_RED};
+        :visited {
+            color: ${LIGHT_RED};
+        }
+    }
 `
 export const Strength_Container = styled.section `
     h1 {
@@ -201,3 +221,16 @@ export const Strength_Container = styled.section `
     }
 `
 
+export const cert = styled.a `
+@media only screen and (max-width: 768px) {
+    display: none;
+}
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    img {
+        height: 125px;
+        width: 125px;
+    }
+`

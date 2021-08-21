@@ -23,11 +23,12 @@ export default () => (
                         <li>Phone: <a href={'tel:' + PHONE_NO}>{PHONE_NO}</a></li>
                         <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_NAME}</a></li>
                     </styles.Links>
-
+                    <styles.cert href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank"><img src="../../static/aws.png" alt="dp" />
+                    </styles.cert>
                 </styles.Personal_Info>
                 <styles.Objective_Content>
                     <h1>Career Objective</h1>
-                    <p>Innovative, creative and a proven team player with 4+ years of experience
+                    <p>Innovative, creative and a proven team player with 5+ years of experience
                     in designing, developing and managing complex web and mobile
                     applications and programs for various clients. I hope to share my skills,
                         expertise and experience with your team and valuable clients.</p>
@@ -53,17 +54,43 @@ export default () => (
                 </styles.Strength_Container>
                 <styles.Experience_Content>
                     <h1>Work Experience</h1>
-                    <div>
+                    <div className="experience">
+                        <div><span>Senior Developer</span> | Apar Technologies Pte Ltd</div>
+                        <styles.Duration>NOV 2021 -  Present</styles.Duration>
                         <div><span>Technical Lead</span> | Aspire Digital Technologies</div>
-                        <styles.Duration>MAR 2020 - Present</styles.Duration>
+                        <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
                         <div><span>IT Analyst</span> | Tata Consultancy Services</div>
                         <styles.Duration>AUG 2015 - MAR 2020</styles.Duration>
                         <p>Served as Technical Spoc at Onshore location Australia</p>
                         <styles.Duration>AUG 2019 - NOV 2019</styles.Duration>
                         <p>Following are accounts/client's projects that I have worked upon:</p>
                     </div>
-                    <div><span>Sr. Lead Frontend Developer</span> | Obeikan – Saudi Arabia</div>
-                    <styles.Duration>MAR 2020 - Present</styles.Duration>
+                    </styles.Experience_Content>
+                    <styles.Experience_Content>
+                    <div className="font-bold"><span>Senior Developer</span> | DBS – Singapore</div>
+                    <styles.Duration>NOV 2020 -  Present</styles.Duration>
+                    </styles.Experience_Content>
+            </styles.cv_page>
+            <styles.cv_page>
+                <styles.Experience_Content>
+                    <div>
+                        <ul>
+                            <li>Widget framework development based on micro-front end, that can ensure the
+                                end-to end reusability of product based Angular components across the DBS IBG
+                                platforms.</li>
+                                <li>Handling the complexities and leading the efficient design of a single widget that
+can consume different sources and be the single source of truth to the end user. </li>
+                            <li>Driving the team of UI developers for developing the widgets based on Angular 8. </li>
+                            <li>Segregating the widgets based on the platform and collaborating with the product
+                                leads to ensure the re-usability of widgets across multiple products. </li>
+                            <li>Established appropriate review procedures to ensure consistent and high quality
+                                deliverables.</li>
+                        </ul>
+                    </div>
+                    </styles.Experience_Content>
+                <styles.Experience_Content>
+                    <div className="font-bold"><span>Sr. Lead Frontend Developer</span> | Obeikan – Saudi Arabia</div>
+                    <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
                     <div>
                         <ul>
                             <li>The paramount objective is to develop Business-to-Business E-Commerce application for Manufacturing Company. </li>
@@ -73,16 +100,13 @@ and static pages.</li>
                     </div>
                     
                 </styles.Experience_Content>
-
-            </styles.cv_page>
-            <styles.cv_page>
                 <styles.Experience_Content>
-                    <ul>
+                <ul>
                     <li>Executes full-stack website launches specializing in front-end features, browser manipulation, and cross-browser compatibility</li>
                     <li>Lead the projects with a team of backend engineers and QA from planning to website launch.</li>
                             <li>Oversees creation and maintenance of front-end standard documents</li>
                     </ul>
-                <div><span>Technical Lead</span> | Leading Australian Retailer</div>
+                <div className="font-bold"><span>Technical Lead</span> | Leading Australian Retailer</div>
                     <styles.Duration>Aug 2018 - MAR 2020</styles.Duration>
                     <div>
                         <ul>
@@ -94,7 +118,7 @@ and static pages.</li>
                         </ul>
                     </div>
                     <div>
-                        <div><span>Frontend Developer</span> | Leading US Retailer</div>
+                        <div className="font-bold"><span>Frontend Developer</span> | Leading US Retailer</div>
                         <styles.Duration>Jul 2017 – Jul 2018</styles.Duration>
                         <div>
                             <ul>
@@ -106,8 +130,12 @@ and static pages.</li>
                             </ul>
                         </div>
                     </div>
+                </styles.Experience_Content>
+            </styles.cv_page>
+            <styles.cv_page>
+                <styles.Experience_Content>
                     <div>
-                        <div><span>Frontend Developer</span> | Leading US Retailer</div>
+                        <div className="font-bold"><span>Frontend Developer</span> | Leading US Retailer</div>
                         <styles.Duration>Nov 2015 – Jun 2017</styles.Duration>
                         <div>
                             <ul>
@@ -122,6 +150,15 @@ and static pages.</li>
                         </div>
                     </div>
                 </styles.Experience_Content>
+                <styles.Education_Content>
+                <h1>Certifications</h1>
+                    <div>
+                        <span>AWS Certified Developer - Associate</span>
+                        <span>Issued Aug 2021 - Expiry Aug 2024
+                        <a href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank">Verify</a>
+                        </span>
+                     </div>
+                </styles.Education_Content>
                 <styles.Education_Content>
                     <h1>Education</h1>
                     <div>
