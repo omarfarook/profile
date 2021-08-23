@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 import { LIGHT_RED } from '../../constant/style'
 
-export const cv_body = styled.div `
+export const cv_body = styled.div`
     background: rgb(204,204,204); 
     z-index: 9998;
     .font-bold {
         font-weight: 400;
     }
   `
-  export const cv_page = styled.div `
+export const cv_page = styled.div`
     background: white;
     display: block;
     margin: 20px auto;
@@ -26,7 +26,7 @@ export const cv_body = styled.div `
   `
 
 
-  export const Cv_Content = styled.div `
+export const Cv_Content = styled.div`
     width: 77%;
     box-sizing: border-box;
 	float: right;
@@ -49,7 +49,7 @@ export const cv_body = styled.div `
         width: 100%;
     }
 `
-export const Personal_Info = styled.section `
+export const Personal_Info = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -81,14 +81,14 @@ export const Personal_Info = styled.section `
     }
 `
 
-export const Duration = styled.span `
+export const Duration = styled.span`
     color: rgb(128, 123, 123) !important;
     font-size: 16px;
     margin: 5px 0;
     display: block;
     font-weight: 400;
 `
-export const Links = styled.ul `
+export const Links = styled.ul`
     display: flex;
     flex-direction: column;
     margin: 5px !important;
@@ -107,7 +107,7 @@ export const Links = styled.ul `
     // align-self: flex-end;
 }
 `
-export const Objective_Content = styled.section `
+export const Objective_Content = styled.section`
     p {
         font-size: 16px;
         line-height: 1.5;
@@ -130,16 +130,16 @@ export const Objective_Content = styled.section `
     }
 `
 
-export const Title = styled.section `
+export const Title = styled.section`
 
 `
 
-export const Role = styled.div `
+export const Role = styled.div`
     margin: 0;
     font-size: 16px;
 `
 
-export const Experience_Content = styled.section `
+export const Experience_Content = styled.section`
     .experience {
         font-weight: 400;
     }
@@ -172,7 +172,7 @@ export const Experience_Content = styled.section `
         }
     }
 `
-export const Education_Content = styled.section `
+export const Education_Content = styled.section`
     line-height: 1.5;
     div {
         display: flex;
@@ -204,7 +204,7 @@ export const Education_Content = styled.section `
         }
     }
 `
-export const Strength_Container = styled.section `
+export const Strength_Container = styled.section`
     h1 {
         color: ${LIGHT_RED};
         font-size: 23px;
@@ -221,10 +221,10 @@ export const Strength_Container = styled.section `
     }
 `
 
-export const cert = styled.a `
-@media only screen and (max-width: 768px) {
-    display: none;
-}
+export const cert = styled.a`
+    @media only screen and (max-width: 768px) {
+       display: none;
+    }
     position: absolute;
     cursor: pointer;
     right: 0;
