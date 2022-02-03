@@ -53,6 +53,9 @@ export const GlobalStyle = () => (
             font-weight: 300;
 
         }
+        .home .hamburger {
+            color: white;
+        }
       `}
     />
   )

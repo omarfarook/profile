@@ -28,7 +28,7 @@ export default () => (
                 </styles.Personal_Info>
                 <styles.Objective_Content>
                     <h1>Career Objective</h1>
-                    <p>Innovative, creative and a proven team player with 5+ years of experience
+                    <p>Innovative, creative and a proven team player with 6+ years of experience
                     in designing, developing and managing complex web and mobile
                     applications and programs for various clients. I hope to share my skills,
                         expertise and experience with your team and valuable clients.</p>

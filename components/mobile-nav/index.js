@@ -51,7 +51,7 @@ class MobileNav extends Component {
                         <li onClick={this.closeNav}><Link href='/contactme' as={'/contactme'}><a><MdPermContactCalendar size={30} /></a></Link></li>
                     </ul>
                 </styles.Sidenav>
-                {!this.state.isNavOpened && <styles.Hamburger onClick={this.openNav}>&#9776;</styles.Hamburger>}
+                {!this.state.isNavOpened && <styles.Hamburger className="hamburger" onClick={this.openNav}>&#9776;</styles.Hamburger>}
             </section>
         )
     }

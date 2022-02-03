@@ -8,13 +8,13 @@ import styled from '@emotion/styled'
 export default () => (
   <Fragment>
     <Head>
-      <title>my-profile.omarfarook.now.sh | Mohamed Omar Farook | Profile</title>
+      <title>omarfarook.com | Mohamed Omar Farook | Profile</title>
       <meta name="description" content='My Profile' />
       <link rel="icon" type="image/png" href='' sizes="32x32" />
       <link rel="icon" type="image/png" href='' sizes="16x16" />
     </Head>
     <div className="fixed-bg">
-    <Layout><Homes /></Layout>
+    <div className='home'><Layout><Homes /></Layout></div>
     </div>
   </Fragment>
 )
