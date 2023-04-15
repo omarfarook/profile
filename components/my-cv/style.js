@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { LIGHT_RED } from '../../constant/style'
 
 export const cv_body = styled.div`
-    background: rgb(204,204,204); 
+    background: rgb(204,204,204);
     z-index: 9998;
     .font-bold {
         font-weight: 400;
@@ -22,6 +22,7 @@ export const cv_page = styled.div`
         height: auto;
         margin: 0;
         box-shadow: none;
+        padding: 8px;
     }
   `
 
@@ -53,13 +54,13 @@ export const Personal_Info = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 36px 0;
+    margin: 8px 0;
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    
+
     h1,
     h3 {
         margin: 5px;
@@ -113,6 +114,7 @@ export const Objective_Content = styled.section`
         line-height: 1.5;
         padding-left: 16px;
         text-align: justify;
+        margin: 8px;
     }
     h1 {
         color: ${LIGHT_RED};
@@ -144,8 +146,8 @@ export const Experience_Content = styled.section`
         font-weight: 400;
     }
     div {
-        margin-top: 30px !important;
-        
+        margin-top: 8px !important;
+
         span {
             color: ${LIGHT_RED};
             margin-bottom: 15px;
@@ -167,6 +169,7 @@ export const Experience_Content = styled.section`
         line-height: 1.5;
         padding-left: 30px;
         text-align: justify;
+        margin: 8px;
         @media only screen and (max-width: 768px) {
             padding-left: 16px;
         }
@@ -177,7 +180,7 @@ export const Education_Content = styled.section`
     div {
         display: flex;
         flex-direction: column;
-        margin: 16px 0px;
+        margin: 8px 0px;
         font-size: 16px;
     }
     h1 {

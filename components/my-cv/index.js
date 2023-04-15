@@ -28,7 +28,7 @@ export default () => (
                 </styles.Personal_Info>
                 <styles.Objective_Content>
                     <h1>Career Objective</h1>
-                    <p>Innovative, creative and a proven team player with 6+ years of experience
+                    <p>Innovative, creative and a proven team player with 7+ years of experience
                     in designing, developing and managing complex web and mobile
                     applications and programs for various clients. I hope to share my skills,
                         expertise and experience with your team and valuable clients.</p>
@@ -38,7 +38,7 @@ export default () => (
                     <div>
                         <ul>
                             <li>Proficient in HTML5, CSS3, Javascript, JQuery, LESS, SASS,Bootstrap</li>
-                            <li>Experience in using Front End Frameworks – Angular, Angular Material, React, React Native, VueJS, Redux, Nextjs.</li>
+                            <li>Experience in using Front End Frameworks – Angular, Angular Material, MUI, React, React Native, VueJS, Redux, Redux toolkit, RTL Query, Nextjs.</li>
                             <li>Experience in Cross-Platform Mobile Development using React Native based mobile application</li>
                             <li>Proficient knowledge in AWS Cloud services.</li>
                             <li>Keen understanding of responsive design principles</li>
@@ -55,11 +55,13 @@ export default () => (
                 <styles.Experience_Content>
                     <h1>Work Experience</h1>
                     <div className="experience">
-                        <div><span>Senior Developer</span> | Apar Technologies Pte Ltd</div>
-                        <styles.Duration>NOV 2021 -  Present</styles.Duration>
-                        <div><span>Technical Lead</span> | Aspire Digital Technologies</div>
+                        <div><span>Senior frontend engineer </span> | HCL Tech Financial Service, Singapore</div>
+                        <styles.Duration>MAR 2022 -  Present</styles.Duration>
+                        <div><span>Senior Developer</span> | Apar Technologies, Singapore (DBS, Singapore) </div>
+                        <styles.Duration>NOV 2021 -  MAR 2022</styles.Duration>
+                        <div><span>Technical Lead</span> | Aspire Digital Technologies, India </div>
                         <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
-                        <div><span>IT Analyst</span> | Tata Consultancy Services</div>
+                        <div><span>IT Analyst</span> | TATA Consultancy Services, India</div>
                         <styles.Duration>AUG 2015 - MAR 2020</styles.Duration>
                         <p>Served as Technical Spoc at Onshore location Australia</p>
                         <styles.Duration>AUG 2019 - NOV 2019</styles.Duration>
@@ -67,12 +69,31 @@ export default () => (
                     </div>
                     </styles.Experience_Content>
                     <styles.Experience_Content>
-                    <div className="font-bold"><span>Senior Developer</span> | DBS – Singapore</div>
-                    <styles.Duration>NOV 2020 -  Present</styles.Duration>
+                <div className="font-bold"><span>Senior frontend engineer</span> | Bank Julius Baer – Singapore</div>
+                    <styles.Duration>MAR 2022 - Present</styles.Duration>
+                    <div>
+                        <ul>
+                            <li>Have initiated the Project with Base Project setup includes, React, MUI, Typescript, Redux & RTK Query, Formik, and InteractionBased TDD Testing</li>
+                                <li>Identified the Reusable widgets and Created the standard widgets such as Tables with Filters, Global Search, Sorting, Pagination</li>
+                        </ul>
+                    </div>
                     </styles.Experience_Content>
             </styles.cv_page>
             <styles.cv_page>
+            <styles.Experience_Content>
+                    <div>
+                        <ul>
+                            <li>Extended the Form fields such as Dropdown, Multi-select, Radio button, Checkbox, and Date-picker to work with Formik</li>
+                            <li>Peer reviewed the code with the TDD and Clean code perspective. I have onboarded 2 Junior developers to the team and Mentored
+them.</li>
+                            <li>Have contributed to 60 percent of the code base of the Repository and Delivered critical application flow in an agreed timeline</li>
+                            <li>Implemented global customization of material UI to the client's standard</li>
+                        </ul>
+                    </div>
+                    </styles.Experience_Content>
                 <styles.Experience_Content>
+                <div className="font-bold"><span>Senior Developer</span> | DBS – Singapore</div>
+                    <styles.Duration>NOV 2020 -  MAR 2022</styles.Duration>
                     <div>
                         <ul>
                             <li>Widget framework development based on micro-front end, that can ensure the
@@ -98,7 +119,7 @@ can consume different sources and be the single source of truth to the end user.
 and static pages.</li>
                         </ul>
                     </div>
-                    
+
                 </styles.Experience_Content>
                 <styles.Experience_Content>
                 <ul>
