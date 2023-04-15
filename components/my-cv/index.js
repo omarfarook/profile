@@ -61,7 +61,7 @@ export default () => (
                         <styles.Duration>NOV 2021 -  MAR 2022</styles.Duration>
                         <div><span>Technical Lead</span> | Aspire Digital Technologies, India </div>
                         <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
-                        <div><span>IT Analyst</span> | TATA Consultancy Services, India</div>
+                        <div><span>IT Analyst</span> | TATA Consultancy Services, India </div>
                         <styles.Duration>AUG 2015 - MAR 2020</styles.Duration>
                         <p>Served as Technical Spoc at Onshore location Australia</p>
                         <styles.Duration>AUG 2019 - NOV 2019</styles.Duration>
