@@ -2,6 +2,7 @@
   "name": "my-profile",
   "version": "2.0.0",
   "description": "",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,5 +26,10 @@
   },
   "overrides": {
     "postcss": "8.5.10"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": "8.5.10"
+    }
   }
 }
