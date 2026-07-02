@@ -1,3 +1,5 @@
+'use client'
+
 import React, { Component } from 'react'
 import emailjs from 'emailjs-com';
 import * as style from './style'

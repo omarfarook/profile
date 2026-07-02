@@ -43,7 +43,7 @@ export const Cv_Content = styled.div`
         right: auto;
         content: " ";
         display: block;
-        background: url(../../static/bg.jpg) top center no-repeat #bababa;
+        background: url(/bg.jpg) top center no-repeat #bababa;
         background-size: cover;
     }
     @media only screen and (max-width:768px) {

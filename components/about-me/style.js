@@ -20,7 +20,7 @@ export const Body_Content = styled.section `
 			right: auto;
 			content: " ";
 			display: block;
-			background: url(../../static/bg.jpg) top center no-repeat #bababa;
+			background: url(/bg.jpg) top center no-repeat #bababa;
 			background-size: cover;
 		}
 	}

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { Fragment } from 'react';
 import * as styles from './style'
 import Mailer from '../mailer'

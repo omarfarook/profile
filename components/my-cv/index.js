@@ -1,3 +1,5 @@
+'use client'
+
 import React, { Component } from 'react';
 import * as styles from './style'
 import {
@@ -23,7 +25,7 @@ export default () => (
                         <li>Phone: <a href={'tel:' + PHONE_NO}>{PHONE_NO}</a></li>
                         <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_NAME}</a></li>
                     </styles.Links>
-                    <styles.cert href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank"><img src="../../static/aws.png" alt="dp" />
+                    <styles.cert href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank"><img src="/aws.png" alt="dp" />
                     </styles.cert>
                 </styles.Personal_Info>
                 <styles.Objective_Content>
