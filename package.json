@@ -21,6 +21,7 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@next/third-parties": "^16.2.10",
     "emailjs-com": "^2.4.1",
     "next": "latest",
     "react": "latest",

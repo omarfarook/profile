@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google'
 import Layout from '../components/layout'
 import './globals.css'
 
@@ -27,6 +28,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-PXBB9JQB" />
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
