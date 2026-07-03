@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import emailjs from 'emailjs-com';
+import * as Sentry from '@sentry/nextjs'
 import * as style from './style'
 import { 
     SEND_MAIL,
@@ -66,6 +67,17 @@ class Mailer extends Component {
                 trackContactFormFailure({
                     errorType: 'provider_non_ok_response'
                 })
+                Sentry.captureMessage('EmailJS returned a non-OK response', {
+                    level: 'warning',
+                    tags: {
+                        feature: 'contact_form',
+                        provider: 'emailjs'
+                    },
+                    extra: {
+                        responseText: res.text,
+                        responseStatus: res.status
+                    }
+                })
                 this.setState({
                     disable: false,
                     buttonText: SENT_FAILURE
@@ -75,6 +87,12 @@ class Mailer extends Component {
           }, (error) => {
             trackContactFormFailure({
                 errorType: 'provider_error'
+            })
+            Sentry.captureException(error, {
+                tags: {
+                    feature: 'contact_form',
+                    provider: 'emailjs'
+                }
             })
             this.setState({
                 disable: false,
