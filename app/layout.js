@@ -25,10 +25,12 @@ export const viewport = {
   shrinkToFit: 'no'
 }
 
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-PXBB9JQB" />
+      {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
