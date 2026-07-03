@@ -13,6 +13,7 @@ import {
     USER_ID,
     SENT_FAILURE
  } from '../../constant'
+import { trackContactFormFailure, trackContactFormSubmit, trackContactFormSuccess } from '../../lib/gtm'
 
 class Mailer extends Component {
 
@@ -40,6 +41,8 @@ class Mailer extends Component {
         const {emailid, subject, message} = this.state;
 
         if(!!emailid && !!subject && !! message) {
+            trackContactFormSubmit()
+
             this.setState({
                 disable: true,
                 buttonText: SENDING
@@ -53,12 +56,16 @@ class Mailer extends Component {
 
             emailjs.send(MAIL_TYPE, TEMPLATE_TYPE, templateParams, USER_ID)
                 .then((res) => {
-              if(res.text === 'OK') {
+          if(res.text === 'OK') {
+                trackContactFormSuccess()
                 this.setState({
                     disable: false,
                     buttonText: SENT_TEXT    
                 })
               } else {
+                trackContactFormFailure({
+                    errorType: 'provider_non_ok_response'
+                })
                 this.setState({
                     disable: false,
                     buttonText: SENT_FAILURE
@@ -66,6 +73,9 @@ class Mailer extends Component {
               }
               this.resetField()
           }, (error) => {
+            trackContactFormFailure({
+                errorType: 'provider_error'
+            })
             this.setState({
                 disable: false,
                 buttonText: SENT_FAILURE

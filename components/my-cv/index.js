@@ -10,6 +10,9 @@ import {
     NAME,
     ROLE
 } from '../../constant'
+import { trackContactLinkClick, trackExternalLinkClick } from '../../lib/gtm'
+
+const AWS_CERT_URL = 'https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile'
 
 export default () => (
     <styles.Cv_Content>
@@ -21,11 +24,11 @@ export default () => (
                         <h3>{ROLE}</h3>
                     </div>
                     <styles.Links>
-                        <li>Email: <a href={'mailto:' + MAIL_ID}>{MAIL_ID}</a></li>
-                        <li>Phone: <a href={'tel:' + PHONE_NO}>{PHONE_NO}</a></li>
-                        <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_NAME}</a></li>
+                        <li>Email: <a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'email', url: `mailto:${MAIL_ID}` })}>{MAIL_ID}</a></li>
+                        <li>Phone: <a href={'tel:' + PHONE_NO} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'phone', url: `tel:${PHONE_NO}` })}>{PHONE_NO}</a></li>
+                        <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'linkedin', url: LINKEDIN_URL })}>{LINKEDIN_NAME}</a></li>
                     </styles.Links>
-                    <styles.cert href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank"><img src="/aws.png" alt="dp" />
+                    <styles.cert href={AWS_CERT_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'credly', url: AWS_CERT_URL })}><img src="/aws.png" alt="dp" />
                     </styles.cert>
                 </styles.Personal_Info>
                 <styles.Objective_Content>
@@ -178,7 +181,7 @@ and static pages.</li>
                     <div>
                         <span>AWS Certified Developer - Associate</span>
                         <span>Issued Aug 2021 - Expiry Aug 2024
-                        <a href="https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile" target="_blank">Verify</a>
+                        <a href={AWS_CERT_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'credly', url: AWS_CERT_URL })}>Verify</a>
                         </span>
                      </div>
                 </styles.Education_Content>
