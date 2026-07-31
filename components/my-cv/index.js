@@ -108,7 +108,7 @@ const downloadCv = () => {
     trackResumeDownload({
         section: 'my_cv'
     })
-    window.open('/Resume-mvm.pdf', '_blank')
+    window.open('/resume.pdf', '_blank')
 }
 
 export default () => (

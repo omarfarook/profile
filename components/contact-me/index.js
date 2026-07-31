@@ -52,7 +52,7 @@ const downloadCv = () => {
     trackResumeDownload({
         section: 'contact_me'
     })
-    window.open('/Resume-mvm.pdf', '_blank')
+    window.open('/resume.pdf', '_blank')
 }
 
 const ContactMe = () => (

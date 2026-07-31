@@ -45,7 +45,7 @@ export default () => {
         trackResumeDownload({
             section: 'desktop_nav'
         })
-        window.open("/Resume-mvm.pdf", "_blank")
+        window.open("/resume.pdf", "_blank")
     }
 
     return (<styles.navContainer>
