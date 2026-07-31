@@ -1,12 +1,13 @@
 'use client'
 
-import React from 'react';
+import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { IoIosMail } from 'react-icons/io'
+import { MdPhoneIphone } from 'react-icons/md'
 import * as styles from './style'
-import { ABOUT_ME, CORE_EXPERTISE } from '../../constant'
-import { IoIosMail } from 'react-icons/io';
-import { MdPhoneIphone } from 'react-icons/md';
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
-import { 
+import {
+    ABOUT_ME,
+    CORE_EXPERTISE,
     MAIL_ID,
     PHONE_NO,
     GITHUB_URL,
@@ -16,27 +17,69 @@ import {
 } from '../../constant'
 import { trackContactLinkClick, trackExternalLinkClick } from '../../lib/gtm'
 
+const principles = [
+    {
+        title: 'Design for change',
+        body: 'I prefer module boundaries, reusable UI patterns, and typed contracts that make future product changes easier to review and ship.'
+    },
+    {
+        title: 'Make quality visible',
+        body: 'I use testable components, Playwright flows, code reviews, and practical RFCs to reduce delivery risk before it reaches users.'
+    },
+    {
+        title: 'Work across functions',
+        body: 'I collaborate closely with product, design, backend, QA, and business stakeholders to keep frontend decisions tied to product outcomes.'
+    }
+]
+
+const qualityPractices = [
+    'Define reusable tables, filters, forms, and workflow components for repeated enterprise patterns.',
+    'Use automated testing and CI feedback to protect critical user journeys.',
+    'Review code with maintainability, accessibility, and product behavior in mind.',
+    'Mentor engineers through pairing, technical reviews, and clear frontend standards.'
+]
+
 export default () => (
     <styles.Body_Content>
-        <styles.Home_Container>
-            <h1>About Me</h1>
-            <p>{ABOUT_ME}</p>
-            <styles.SectionTitle>What I do best</styles.SectionTitle>
-            <styles.ExpertiseList>
-                {CORE_EXPERTISE.map((item) => <li key={item}>{item}</li>)}
-            </styles.ExpertiseList>
-            <styles.SectionTitle>How I work</styles.SectionTitle>
-            <p>I work best where frontend complexity meets product delivery: modernizing legacy workflows, defining maintainable module boundaries, building reusable components, and making quality visible through automated tests, code reviews, RFCs, and shared engineering practices.</p>
+        <styles.About_Container>
+            <styles.Kicker>About</styles.Kicker>
+            <h1>I build frontend systems for complex enterprise products.</h1>
+            <styles.Intro>{ABOUT_ME}</styles.Intro>
+
+            <styles.Section>
+                <h2>What I do best</h2>
+                <styles.ExpertiseList>
+                    {CORE_EXPERTISE.map((item) => <li key={item}>{item}</li>)}
+                </styles.ExpertiseList>
+            </styles.Section>
+
+            <styles.PrincipleGrid>
+                {principles.map((item) => (
+                    <styles.PrincipleCard key={item.title}>
+                        <h2>{item.title}</h2>
+                        <p>{item.body}</p>
+                    </styles.PrincipleCard>
+                ))}
+            </styles.PrincipleGrid>
+
+            <styles.Section>
+                <h2>How I raise frontend quality</h2>
+                <styles.QualityList>
+                    {qualityPractices.map((item) => <li key={item}>{item}</li>)}
+                </styles.QualityList>
+            </styles.Section>
+
+            <styles.NextPanel>
+                <h2>What I am looking for next</h2>
+                <p>Senior frontend engineering roles where I can lead architecture, improve product delivery systems, mentor engineers, and build reliable React, Next.js, TypeScript, and GraphQL applications in product-focused teams.</p>
+            </styles.NextPanel>
+
             <styles.Links>
-                <div>
-                    <address><span>E-mail : </span><a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'about_me', method: 'email', url: `mailto:${MAIL_ID}` })}><span><IoIosMail size={20} /></span>{MAIL_ID}</a></address>
-                    <address><span>Phone : </span><a href={'tel:' + PHONE_NO} onClick={() => trackContactLinkClick({ section: 'about_me', method: 'phone', url: `tel:${PHONE_NO}` })}><span><MdPhoneIphone size={20} /></span>{PHONE_NO}</a></address>
-                </div>
-                <div>
-                    <address><span>LinkedIn : </span><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'about_me', platform: 'linkedin', url: LINKEDIN_URL })}><span><FaLinkedin size={20} /></span>{LINKEDIN_NAME}</a></address>
-                    <address><span>Github :</span><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'about_me', platform: 'github', url: GITHUB_URL })}><span><FaGithub size={20} /></span>{GITHUB_NAME}</a></address>
-                </div>
+                <a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'about_me', method: 'email', url: `mailto:${MAIL_ID}` })}><IoIosMail size={20} />{MAIL_ID}</a>
+                <a href={'tel:' + PHONE_NO} onClick={() => trackContactLinkClick({ section: 'about_me', method: 'phone', url: `tel:${PHONE_NO}` })}><MdPhoneIphone size={20} />{PHONE_NO}</a>
+                <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'about_me', platform: 'linkedin', url: LINKEDIN_URL })}><FaLinkedin size={20} />{LINKEDIN_NAME}</a>
+                <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'about_me', platform: 'github', url: GITHUB_URL })}><FaGithub size={20} />{GITHUB_NAME}</a>
             </styles.Links>
-        </styles.Home_Container>
+        </styles.About_Container>
     </styles.Body_Content>
 )
