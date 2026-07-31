@@ -39,45 +39,53 @@ export const WORK_CASE_STUDIES = [
   {
     title: 'ETRM and BusinessPro Frontend Foundations',
     domain: 'Energy technology',
-    summary: 'Delivered customer-facing capabilities across trading workflows, pricing, authentication, and market data visualization for Flo Energy platforms.',
-    highlights: [
-      'Implemented Keycloak authentication and RBAC for enterprise access control',
-      'Restored reliable Playwright end-to-end testing in CI after repository migration',
-      'Authored frontend architecture RFCs to improve module boundaries, maintainability, and scalability'
+    context: 'Flo Energy needed reliable frontend foundations across trading workflows, pricing, authentication, and market data visualization after repository and platform changes.',
+    role: 'Delivered customer-facing frontend capabilities while strengthening architecture, test reliability, and team alignment through RFCs and guild sessions.',
+    approach: [
+      'Implemented Keycloak authentication and RBAC for enterprise access control.',
+      'Resolved Playwright CI failures caused by authentication and GraphQL mocking challenges.',
+      'Authored frontend architecture RFCs to clarify module boundaries and long-term maintainability.'
     ],
-    stack: 'React, TypeScript, GraphQL, Keycloak, Playwright'
+    impact: 'Improved frontend delivery confidence by restoring dependable E2E coverage and giving the team clearer architectural direction.',
+    stack: ['React', 'TypeScript', 'GraphQL', 'Keycloak', 'Playwright']
   },
   {
     title: 'React Modernization for Enterprise Banking',
     domain: 'Banking and wealth management',
-    summary: 'Modernized critical banking workflows by migrating legacy Appway experiences to a React-based frontend while building reusable foundations for future delivery.',
-    highlights: [
-      'Migrated a critical workflow management application while maintaining feature parity',
-      'Built reusable table, filter, global search, sorting, and pagination components',
-      'Applied TDD and cross-functional delivery practices with backend, QA, and business teams'
+    context: 'A critical wealth-management workflow needed to move from legacy Appway screens to a modern React frontend without losing business capability.',
+    role: 'Helped establish the frontend project foundation and delivered reusable UI patterns for data-heavy enterprise workflows.',
+    approach: [
+      'Migrated critical workflow screens while maintaining feature parity.',
+      'Built reusable table, filter, global search, sorting, pagination, and Formik-integrated form components.',
+      'Applied TDD and code review practices across frontend delivery.'
     ],
-    stack: 'React, TypeScript, Redux Toolkit, RTK Query, MUI, Formik'
+    impact: 'Reduced repeated UI work and improved maintainability for future banking application development.',
+    stack: ['React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'MUI', 'Formik']
   },
   {
     title: 'Reusable Widget Framework for Banking Platforms',
     domain: 'Enterprise banking',
-    summary: 'Designed shared Angular widgets and a micro-frontend framework to support reusable customer management capabilities across multiple DBS IBG teams.',
-    highlights: [
-      'Designed reusable widgets that integrate multiple data sources behind a consistent user experience',
-      'Built a configurable drag-and-drop form builder for dynamic business forms',
-      'Led UI implementation practices across the frontend team'
+    context: 'Multiple banking teams needed reusable customer-management widgets that could work across products while consuming different data sources.',
+    role: 'Led frontend widget design and implementation across the UI team for shared Angular and micro-frontend capabilities.',
+    approach: [
+      'Designed reusable widgets that integrated multiple data sources behind a consistent user experience.',
+      'Built a configurable drag-and-drop form builder for dynamic business forms.',
+      'Worked with product leads to identify reusable platform-level components.'
     ],
-    stack: 'Angular, AngularJS, Micro-frontends, TDD'
+    impact: 'Enabled shared frontend capabilities across enterprise banking platforms and reduced duplicated component implementation.',
+    stack: ['Angular', 'AngularJS', 'Micro-frontends', 'TDD']
   },
   {
     title: 'Commerce Frontend Performance and SEO',
     domain: 'B2B and retail e-commerce',
-    summary: 'Led frontend development for commerce platforms with a focus on responsive delivery, SAP Commerce integration, SSR, and performance improvements.',
-    highlights: [
-      'Customized Angular Spartacus storefronts on SAP Commerce Hybris',
-      'Implemented SSR and State Transfer to improve performance and SEO',
-      'Improved frontend performance through asynchronous content rendering'
+    context: 'Commerce platforms needed responsive storefront delivery, SAP Commerce CMS integration, better rendering performance, and stronger SEO support.',
+    role: 'Led and contributed to frontend delivery across B2B and retail e-commerce implementations with backend, QA, and design teams.',
+    approach: [
+      'Customized Angular Spartacus storefronts on SAP Commerce Hybris.',
+      'Implemented SSR and State Transfer to improve application performance and SEO.',
+      'Improved frontend performance through asynchronous CMS content rendering.'
     ],
-    stack: 'Angular, Spartacus, SAP Commerce, SSR, State Transfer'
+    impact: 'Improved page rendering behavior and helped teams deliver scalable commerce experiences across responsive web surfaces.',
+    stack: ['Angular', 'Spartacus', 'SAP Commerce', 'SSR', 'State Transfer']
   }
 ]
