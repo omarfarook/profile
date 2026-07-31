@@ -107,7 +107,11 @@ export const ContactCard = styled.a `
 		flex: 0 0 auto;
 		height: 42px;
 		justify-content: center;
+		line-height: 1;
 		width: 42px;
+		svg {
+			display: block;
+		}
 	}
 	strong {
 		color: ${LIGHT_RED};

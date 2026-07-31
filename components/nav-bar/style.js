@@ -13,32 +13,6 @@ export const navContainer = styled.div`
     box-sizing: border-box; 
     z-index: 9999;
     border-right: 1px solid rgba(255, 255, 255, .08);
-    & ul li {
-		position: relative;
-		list-style: none;
-		padding: 0;
-		margin: 8px 0;
-		cursor: pointer;
-		a {
-            border-radius: 6px;
-            box-sizing: border-box;
-            display: block;
-			font-size: 15px;
-            font-weight: 400;
-			color: rgba(255, 255, 255, 0.72);
-            padding: 11px 12px;
-			text-decoration: none;
-			&:hover {
-				color: ${FORMAL_WHITE};
-                background: rgba(255, 255, 255, .08);
-			}
-		}
-        .active {
-            color: ${FORMAL_WHITE};
-            background: rgba(255, 255, 255, .12);
-            box-shadow: inset 3px 0 0 #1f7a6d;
-        }
-    }
 	
     @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
             display: none;
@@ -57,6 +31,32 @@ export const Brand = styled(Link) `
 export const links = styled.ul `
     padding: 0;
     margin: 0;
+    li {
+        cursor: pointer;
+        list-style: none;
+        margin: 8px 0;
+        padding: 0;
+        position: relative;
+        a {
+            border-radius: 6px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.72);
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 11px 12px;
+            text-decoration: none;
+            &:hover {
+                color: ${FORMAL_WHITE};
+                background: rgba(255, 255, 255, .08);
+            }
+        }
+        .active {
+            color: ${FORMAL_WHITE};
+            background: rgba(255, 255, 255, .12);
+            box-shadow: inset 3px 0 0 #1f7a6d;
+        }
+    }
 `
 export const name_role = styled.section `
     margin-top: 25px;
@@ -78,7 +78,7 @@ export const role = styled.p `
 `
 export const get_in_touch = styled.section `
     position: absolute;
-    bottom: 26px;
+    bottom: 48px;
     width: calc(100% - 56px);
     left: 28px;
     span {
@@ -103,11 +103,17 @@ export const get_in_touch = styled.section `
             align-items: center;
             border: 1px solid rgba(255, 255, 255, .14);
             border-radius: 6px;
+            box-sizing: border-box;
             color: rgba(255, 255, 255, .76);
             display: flex;
             height: 34px;
             justify-content: center;
+            line-height: 1;
+            padding: 0;
             width: 34px;
+            svg {
+                display: block;
+            }
             &:hover {
                 background: rgba(255, 255, 255, .08);
                 color: white;

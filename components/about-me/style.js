@@ -169,8 +169,13 @@ export const Links = styled.div `
 		color: ${LIGHT_RED};
 		display: flex;
 		gap: .45rem;
+		line-height: 1.2;
 		min-height: 42px;
 		padding: 0 .85rem;
 		text-decoration: none;
+		svg {
+			display: block;
+			flex: 0 0 auto;
+		}
 	}
 `
