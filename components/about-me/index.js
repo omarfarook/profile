@@ -2,7 +2,7 @@
 
 import React from 'react';
 import * as styles from './style'
-import { ABOUT_ME } from '../../constant'
+import { ABOUT_ME, CORE_EXPERTISE } from '../../constant'
 import { IoIosMail } from 'react-icons/io';
 import { MdPhoneIphone } from 'react-icons/md';
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
@@ -21,6 +21,12 @@ export default () => (
         <styles.Home_Container>
             <h1>About Me</h1>
             <p>{ABOUT_ME}</p>
+            <styles.SectionTitle>What I do best</styles.SectionTitle>
+            <styles.ExpertiseList>
+                {CORE_EXPERTISE.map((item) => <li key={item}>{item}</li>)}
+            </styles.ExpertiseList>
+            <styles.SectionTitle>How I work</styles.SectionTitle>
+            <p>I work best where frontend complexity meets product delivery: modernizing legacy workflows, defining maintainable module boundaries, building reusable components, and making quality visible through automated tests, code reviews, RFCs, and shared engineering practices.</p>
             <styles.Links>
                 <div>
                     <address><span>E-mail : </span><a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'about_me', method: 'email', url: `mailto:${MAIL_ID}` })}><span><IoIosMail size={20} /></span>{MAIL_ID}</a></address>

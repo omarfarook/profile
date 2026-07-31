@@ -5,11 +5,11 @@ export const Body_Content = styled.section `
     display: flex;
 	width: 77%;
 	float: right;
-	height: 100vh;
+	min-height: 100vh;
 	justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 4rem 20px;
 	@media only screen and (min-width:769px) {
 		&::before {
 			position: fixed;
@@ -32,10 +32,29 @@ export const Body_Content = styled.section `
 export const Home_Container = styled.section `
 	display: flex;
 	flex-direction: column;
-	max-width: 625px;
+	max-width: 760px;
     align-items: flex-start;
 	h1 {
 		color: rgb(15,51,97);
+	}
+`
+
+export const SectionTitle = styled.h2 `
+	color: rgb(15,51,97);
+	font-size: 1.45rem;
+	margin-top: 1.75rem;
+`
+
+export const ExpertiseList = styled.ul `
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: .75rem 1rem;
+	padding-left: 1.2rem;
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+	li {
+		line-height: 150%;
 	}
 `
 export const Links = styled.div `

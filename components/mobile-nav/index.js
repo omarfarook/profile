@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FaHome } from 'react-icons/fa'
 import { FiInfo } from 'react-icons/fi'
 import { GoFile } from 'react-icons/go';
-import { MdPermContactCalendar } from 'react-icons/md';
+import { MdPermContactCalendar, MdWorkOutline } from 'react-icons/md';
 import * as styles from './style'
 import { trackMobileNavClose, trackMobileNavOpen, trackNavigationClick } from '../../lib/gtm'
 
@@ -53,10 +53,11 @@ const MobileNav = () => {
             <styles.Sidenav ref={node} style={{ width: isNavOpened ? '75px' : '0' }}>
                 <button onClick={() => closeNav('close_button')}>&times;</button>
                 <ul>
-                    <li><Link href="/" onClick={() => navigate('Home', '/')}><FaHome size={30} /></Link></li>
-                    <li><Link href="/aboutme" onClick={() => navigate('About Me', '/aboutme')}><FiInfo size={30} /></Link></li>
-                    <li><Link href="/mycv" onClick={() => navigate('my CV', '/mycv')}><GoFile size={30} /></Link></li>
-                    <li><Link href="/contactme" onClick={() => navigate('Contact Me', '/contactme')}><MdPermContactCalendar size={30} /></Link></li>
+                    <li><Link href="/" aria-label="Home" onClick={() => navigate('Home', '/')}><FaHome size={30} /></Link></li>
+                    <li><Link href="/aboutme" aria-label="About Me" onClick={() => navigate('About Me', '/aboutme')}><FiInfo size={30} /></Link></li>
+                    <li><Link href="/work" aria-label="Work" onClick={() => navigate('Work', '/work')}><MdWorkOutline size={30} /></Link></li>
+                    <li><Link href="/mycv" aria-label="My CV" onClick={() => navigate('my CV', '/mycv')}><GoFile size={30} /></Link></li>
+                    <li><Link href="/contactme" aria-label="Contact Me" onClick={() => navigate('Contact Me', '/contactme')}><MdPermContactCalendar size={30} /></Link></li>
                 </ul>
             </styles.Sidenav>
             {!isNavOpened && <styles.Hamburger className="hamburger" onClick={openNav}>&#9776;</styles.Hamburger>}

@@ -1,7 +1,8 @@
 import MyCv from '../../components/my-cv'
 
 export const metadata = {
-  title: 'my-profile.omarfarook.now.sh | Mohamed Omar Farook | CV'
+  title: 'CV',
+  description: 'CV and experience summary for Mohamed Omar Farook, Senior Software Engineer specializing in frontend architecture and enterprise applications.'
 }
 
 export default function MyCvPage() {

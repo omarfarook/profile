@@ -51,6 +51,7 @@ export default () => {
         </styles.name_role>
         <styles.links>
             <li><Link href="/aboutme" onClick={() => trackNavigation('About Me', '/aboutme')} className={path == "/aboutme" ? "active" : ""}>About Me <span><IoIosArrowForward size={15} /></span></Link></li>
+            <li><Link href="/work" onClick={() => trackNavigation('Work', '/work')} className={path == "/work" ? "active" : ""}>Work<span><IoIosArrowForward size={15} /></span></Link></li>
             <li><Link href="/mycv" onClick={() => trackNavigation('my CV', '/mycv')} className={path == "/mycv" ? "active" : ""}>my CV<span><IoIosArrowForward size={15} /></span></Link></li>
             <li><Link href="/contactme" onClick={() => trackNavigation('Contact Me', '/contactme')} className={path == "/contactme" ? "active" : ""}>Contact Me<span><IoIosArrowForward size={15} /></span></Link></li>
         </styles.links>

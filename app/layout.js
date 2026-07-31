@@ -4,10 +4,22 @@ import './globals.css'
 
 export const metadata = {
   title: {
-    default: 'omarfarook.com | Mohamed Omar Farook | Profile',
+    default: 'Mohamed Omar Farook | Senior Software Engineer',
     template: '%s | Mohamed Omar Farook'
   },
-  description: 'My Profile',
+  description: 'Senior Software Engineer in Singapore specializing in frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise applications.',
+  openGraph: {
+    title: 'Mohamed Omar Farook | Senior Software Engineer',
+    description: 'Frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise application work by Mohamed Omar Farook.',
+    url: 'https://omarfarook.com',
+    siteName: 'Mohamed Omar Farook',
+    type: 'profile'
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Mohamed Omar Farook | Senior Software Engineer',
+    description: 'Frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise application work.'
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -20,8 +32,6 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   shrinkToFit: 'no'
 }
 

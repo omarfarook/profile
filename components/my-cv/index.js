@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Component } from 'react';
+import React from 'react';
 import * as styles from './style'
 import {
     MAIL_ID,
@@ -32,36 +32,29 @@ export default () => (
                     </styles.cert>
                 </styles.Personal_Info>
                 <styles.Objective_Content>
-                    <h1>Career Objective</h1>
-                    <p>Innovative, creative and a proven team player with 7+ years of experience
-                    in designing, developing and managing complex web and mobile
-                    applications and programs for various clients. I hope to share my skills,
-                        expertise and experience with your team and valuable clients.</p>
+                    <h1>Professional Summary</h1>
+                    <p>Senior Software Engineer with 10+ years of experience building enterprise applications across banking, energy, and e-commerce. Specialized in scalable frontend architecture, React, Next.js, TypeScript, GraphQL, reusable UI platforms, automated testing, and maintainable application design.</p>
                 </styles.Objective_Content>
                 <styles.Strength_Container>
                     <h1>Strengths</h1>
                     <div>
                         <ul>
-                            <li>Proficient in HTML5, CSS3, Javascript, JQuery, LESS, SASS,Bootstrap</li>
-                            <li>Experience in using Front End Frameworks – Angular, Angular Material, MUI, React, React Native, VueJS, Redux, Redux toolkit, RTL Query, Nextjs.</li>
-                            <li>Experience in Cross-Platform Mobile Development using React Native based mobile application</li>
-                            <li>Proficient knowledge in AWS Cloud services.</li>
-                            <li>Keen understanding of responsive design principles</li>
-                            <li>Experienced in using Functional, Unit testing methods and Code
-                            Review to deliver high quality, fit for purpose software with
-                                emphasis on testability and maintainability.</li>
-                            <li>Strong experience of working in agile teams and using Continuous
-                                Delivery to get quick feedback and improve constantly</li>
-                            <li>Possess a knack of teamwork and comfortable working cross
-                                functional</li>
+                            <li>Frontend architecture for enterprise applications using React, Next.js, TypeScript, GraphQL, Angular, and micro-frontend patterns.</li>
+                            <li>Reusable UI platforms including component libraries, tables, filters, global search, sorting, pagination, and form foundations.</li>
+                            <li>Automated testing and quality practices using Playwright, TDD, unit testing, code review, and CI/CD workflows.</li>
+                            <li>Authentication and authorization experience with Keycloak, OAuth2, and RBAC.</li>
+                            <li>Strong responsive design, performance, SEO, and cross-browser application delivery experience.</li>
+                            <li>Technical leadership through RFCs, internal guild sessions, mentoring, and cross-functional collaboration.</li>
                         </ul>
                     </div>
                 </styles.Strength_Container>
                 <styles.Experience_Content>
                     <h1>Work Experience</h1>
                     <div className="experience">
-                        <div><span>Senior frontend engineer </span> | HCL Tech Financial Service, Singapore</div>
-                        <styles.Duration>MAR 2022 -  Present</styles.Duration>
+                        <div><span>Senior Software Engineer </span> | Flo Energy, Singapore</div>
+                        <styles.Duration>FEB 2025 - Present</styles.Duration>
+                        <div><span>Senior Software Engineer </span> | HCL Tech Financial Service, Singapore</div>
+                        <styles.Duration>MAR 2022 - FEB 2025</styles.Duration>
                         <div><span>Senior Developer</span> | Apar Technologies, Singapore (DBS, Singapore) </div>
                         <styles.Duration>NOV 2021 -  MAR 2022</styles.Duration>
                         <div><span>Technical Lead</span> | Aspire Digital Technologies, India </div>
@@ -74,8 +67,20 @@ export default () => (
                     </div>
                     </styles.Experience_Content>
                     <styles.Experience_Content>
-                <div className="font-bold"><span>Senior frontend engineer</span> | Bank Julius Baer – Singapore</div>
-                    <styles.Duration>MAR 2022 - Present</styles.Duration>
+                <div className="font-bold"><span>Senior Software Engineer</span> | Flo Energy – Singapore</div>
+                    <styles.Duration>FEB 2025 - Present</styles.Duration>
+                    <div>
+                        <ul>
+                            <li>Delivered customer-facing capabilities across Energy Trading and Risk Management and BusinessPro platforms, spanning trading workflows, pricing, authentication, and market data visualization.</li>
+                            <li>Implemented Keycloak authentication and RBAC, and restored reliable Playwright end-to-end testing in CI by resolving authentication and GraphQL mocking challenges following a repository migration.</li>
+                            <li>Authored frontend architecture RFCs to improve module boundaries, maintainability, and scalability across the frontend codebase.</li>
+                            <li>Presented frontend architecture and testing practices through engineering RFCs and internal guild sessions.</li>
+                        </ul>
+                    </div>
+                    </styles.Experience_Content>
+                    <styles.Experience_Content>
+                <div className="font-bold"><span>Senior Software Engineer</span> | Bank Julius Baer – Singapore</div>
+                    <styles.Duration>MAR 2022 - FEB 2025</styles.Duration>
                     <div>
                         <ul>
                             <li>Have initiated the Project with Base Project setup includes, React, MUI, Typescript, Redux & RTK Query, Formik, and InteractionBased TDD Testing</li>

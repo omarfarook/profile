@@ -1,15 +1,18 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { LIGHT_RED } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
 	width: 77%;
 	float: right;
-	height: 100vh;
-	ustify-content: flex-start;
+	min-height: 100vh;
+	justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 0 20px;
+	background:
+		linear-gradient(120deg, rgba(15, 51, 97, .06), rgba(31, 122, 109, .06)),
+		#f7f9fc;
     @media only screen and (max-width:768px) {
         width: 100%
     }
@@ -18,16 +21,59 @@ export const Body_Content = styled.section `
 export const Home_Container = styled.section `
 	display: flex;
 	flex-direction: column;
-	max-width: 625px;
+	max-width: 860px;
     align-items: flex-start;
-	color: ${FORMAL_WHITE};
+	color: #152033;
     z-index: 9998;
-	padding-top: 8rem;
+	padding: 7rem 0 4rem 4.5rem;
     display: block;
-    padding-left: 3rem;
-	p {
-		font-size: 1.5rem;
+	h1 {
+		color: ${LIGHT_RED};
+		font-size: 4.25rem;
+		font-weight: 500;
+		line-height: 108%;
+		margin-bottom: 1.25rem;
+		max-width: 820px;
 	}
+	h2 {
+		color: #26364d;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 140%;
+		margin-bottom: 1.25rem;
+		max-width: 760px;
+	}
+	p {
+		color: #42526b;
+		font-size: 1.2rem;
+		line-height: 170%;
+		max-width: 740px;
+	}
+	@media only screen and (max-width:768px) {
+		padding: 4.75rem 0 3rem;
+		h1 {
+			font-size: 2.55rem;
+			margin-bottom: 1rem;
+		}
+		h2 {
+			font-size: 1.25rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 1rem;
+			line-height: 160%;
+		}
+	}
+`
+
+export const Kicker = styled.span `
+	display: block;
+	color: #1f7a6d;
+	font-size: .85rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
 `
 export const Name = styled.span `
 	text-transform: uppercase;
@@ -59,24 +105,70 @@ export const Home_Links = styled.ul `
 `
 
 export const Btn_Group = styled.div `
-	margin: 5rem 0
+	display: flex;
+	flex-wrap: wrap;
+	gap: .85rem;
+	margin: 2.25rem 0 0;
+	@media only screen and (max-width:768px) {
+		margin-top: 1.6rem;
+	}
 `
 
 export const AboutButton = styled.button `
-	padding: 15px 20px;
-	background: transparent;
+	align-items: center;
+	background: white;
+	border: 1px solid rgba(15, 51, 97, .22);
+	border-radius: 6px;
+	box-shadow: 0 8px 18px rgba(15, 51, 97, .07);
+	color: ${LIGHT_RED};
 	display: block;
-	cursor: pointer	;
-	color: white;
-	border: 1px solid ${FORMAL_WHITE};
-	text-transform: uppercase;
+	cursor: pointer;
 	font-weight: 500;
-	text-decoration: none;
-	opacity: .8;
-	box-shadow: 1px 1px 2px rgb(0 0 0 / 47%);
-	margin: 2rem 0;
 	font-size: 1rem;
-    &:hover {
-		opacity: 1;
-   }
+	margin: 0;
+	min-height: 48px;
+	padding: 0 1.1rem;
+	text-decoration: none;
+	&.primary {
+		background: ${LIGHT_RED};
+		border-color: ${LIGHT_RED};
+		color: white;
+	}
+	&.text {
+		background: transparent;
+		border-color: transparent;
+		box-shadow: none;
+		text-decoration: underline;
+	}
+	&:hover {
+		border-color: ${LIGHT_RED};
+		box-shadow: 0 10px 22px rgba(15, 51, 97, .12);
+	}
+	&:focus-visible {
+		outline: 3px solid rgba(31, 122, 109, .35);
+		outline-offset: 3px;
+	}
+`
+
+export const ProofList = styled.ul `
+	display: grid;
+	gap: .8rem;
+	margin: 2rem 0 0;
+	padding: 0;
+	list-style: none;
+	max-width: 760px;
+	li {
+		border-left: 3px solid #1f7a6d;
+		color: #26364d;
+		font-size: 1rem;
+		padding-left: .9rem;
+		line-height: 150%;
+	}
+	@media only screen and (max-width:768px) {
+		gap: .65rem;
+		margin-top: 1.5rem;
+		li {
+			font-size: .95rem;
+		}
+	}
 `
