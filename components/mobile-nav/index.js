@@ -2,16 +2,23 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
-import { FaHome } from 'react-icons/fa'
-import { FiInfo } from 'react-icons/fi'
-import { GoFile } from 'react-icons/go';
-import { MdPermContactCalendar, MdWorkOutline } from 'react-icons/md';
+import { usePathname } from 'next/navigation';
 import * as styles from './style'
 import { trackMobileNavClose, trackMobileNavOpen, trackNavigationClick } from '../../lib/gtm'
+import { NAME, ROLE } from '../../constant'
+
+const navItems = [
+    { label: 'Home', path: '/' },
+    { label: 'About', path: '/aboutme' },
+    { label: 'Work', path: '/work' },
+    { label: 'CV', path: '/mycv' },
+    { label: 'Contact', path: '/contactme' }
+]
 
 const MobileNav = () => {
     const [isNavOpened, setIsNavOpened] = useState(false)
     const node = useRef(null)
+    const path = usePathname()
 
     const openNav = () => {
         trackMobileNavOpen()
@@ -50,17 +57,30 @@ const MobileNav = () => {
 
     return (
         <section>
-            <styles.Sidenav ref={node} style={{ width: isNavOpened ? '75px' : '0' }}>
-                <button onClick={() => closeNav('close_button')}>&times;</button>
+            <styles.MobileHeader>
+                <styles.Hamburger className="hamburger" aria-label="Open navigation" onClick={openNav} type="button">&#9776;</styles.Hamburger>
+                <styles.MobileBrand href="/" onClick={() => navigate('Home', '/')}>
+                    <span>{NAME}</span>
+                    <small>{ROLE}</small>
+                </styles.MobileBrand>
+            </styles.MobileHeader>
+            {isNavOpened ? <styles.Overlay onClick={() => closeNav('outside_click')} /> : null}
+            <styles.Sidenav ref={node} style={{ transform: isNavOpened ? 'translateX(0)' : 'translateX(-100%)' }}>
+                <styles.DrawerHeader>
+                    <div>
+                        <span>{NAME}</span>
+                        <small>{ROLE}</small>
+                    </div>
+                    <button aria-label="Close navigation" onClick={() => closeNav('close_button')} type="button">&times;</button>
+                </styles.DrawerHeader>
                 <ul>
-                    <li><Link href="/" aria-label="Home" onClick={() => navigate('Home', '/')}><FaHome size={30} /></Link></li>
-                    <li><Link href="/aboutme" aria-label="About Me" onClick={() => navigate('About Me', '/aboutme')}><FiInfo size={30} /></Link></li>
-                    <li><Link href="/work" aria-label="Work" onClick={() => navigate('Work', '/work')}><MdWorkOutline size={30} /></Link></li>
-                    <li><Link href="/mycv" aria-label="My CV" onClick={() => navigate('my CV', '/mycv')}><GoFile size={30} /></Link></li>
-                    <li><Link href="/contactme" aria-label="Contact Me" onClick={() => navigate('Contact Me', '/contactme')}><MdPermContactCalendar size={30} /></Link></li>
+                    {navItems.map((item) => (
+                        <li key={item.path}>
+                            <Link href={item.path} onClick={() => navigate(item.label, item.path)} className={path == item.path ? 'active' : ''}>{item.label}</Link>
+                        </li>
+                    ))}
                 </ul>
             </styles.Sidenav>
-            {!isNavOpened && <styles.Hamburger className="hamburger" onClick={openNav}>&#9776;</styles.Hamburger>}
         </section>
     )
 }
