@@ -37,6 +37,7 @@ export const CORE_EXPERTISE = [
 
 export const WORK_CASE_STUDIES = [
   {
+    slug: 'etrm-businesspro-frontend-foundations',
     title: 'ETRM and BusinessPro Frontend Foundations',
     domain: 'Energy technology',
     context: 'Flo Energy needed reliable frontend foundations across trading workflows, pricing, authentication, and market data visualization after repository and platform changes.',
@@ -50,6 +51,7 @@ export const WORK_CASE_STUDIES = [
     stack: ['React', 'TypeScript', 'GraphQL', 'Keycloak', 'Playwright']
   },
   {
+    slug: 'react-modernization-enterprise-banking',
     title: 'React Modernization for Enterprise Banking',
     domain: 'Banking and wealth management',
     context: 'A critical wealth-management workflow needed to move from legacy Appway screens to a modern React frontend without losing business capability.',
@@ -87,5 +89,78 @@ export const WORK_CASE_STUDIES = [
     ],
     impact: 'Improved page rendering behavior and helped teams deliver scalable commerce experiences across responsive web surfaces.',
     stack: ['Angular', 'Spartacus', 'SAP Commerce', 'SSR', 'State Transfer']
+  }
+]
+
+export const CASE_STUDY_DETAILS = [
+  {
+    slug: 'etrm-businesspro-frontend-foundations',
+    title: 'ETRM and BusinessPro Frontend Foundations',
+    eyebrow: 'Energy technology',
+    summary: 'Strengthened frontend foundations across trading, pricing, authentication, and market-data workflows while improving automated test reliability.',
+    context: 'Flo Energy platforms required dependable frontend delivery across customer-facing workflows where authentication, GraphQL data, and CI stability directly affected release confidence.',
+    role: 'Senior Software Engineer responsible for product delivery, frontend architecture RFCs, authentication implementation, and test reliability improvements.',
+    sections: [
+      {
+        title: 'Problem',
+        points: [
+          'Repository migration disrupted reliable Playwright end-to-end coverage.',
+          'Authentication and authorization flows needed to support enterprise access patterns.',
+          'Frontend module boundaries needed clearer direction as the codebase scaled.'
+        ]
+      },
+      {
+        title: 'Approach',
+        points: [
+          'Implemented Keycloak authentication and RBAC in frontend workflows.',
+          'Resolved authentication and GraphQL mocking issues that blocked Playwright reliability in CI.',
+          'Authored RFCs to make frontend boundaries, ownership, and maintainability more explicit.'
+        ]
+      },
+      {
+        title: 'Impact',
+        points: [
+          'Restored confidence in CI E2E testing for critical user flows.',
+          'Improved frontend architectural consistency across product work.',
+          'Shared testing and architecture practices through RFCs and internal guild sessions.'
+        ]
+      }
+    ],
+    stack: ['React', 'TypeScript', 'GraphQL', 'Keycloak', 'Playwright', 'CI/CD']
+  },
+  {
+    slug: 'react-modernization-enterprise-banking',
+    title: 'React Modernization for Enterprise Banking',
+    eyebrow: 'Banking and wealth management',
+    summary: 'Modernized legacy banking workflows into React while creating reusable UI foundations for enterprise data-heavy screens.',
+    context: 'A critical wealth-management workflow needed to migrate from legacy Appway screens to a React frontend while preserving feature parity and reducing future delivery cost.',
+    role: 'Senior Software Engineer contributing to project setup, reusable UI architecture, form foundations, and quality practices.',
+    sections: [
+      {
+        title: 'Problem',
+        points: [
+          'Legacy workflows were difficult to extend and maintain.',
+          'Data-heavy screens needed consistent tables, filtering, sorting, pagination, and form patterns.',
+          'The team needed a maintainable frontend foundation for future banking workflows.'
+        ]
+      },
+      {
+        title: 'Approach',
+        points: [
+          'Established React, TypeScript, MUI, Redux Toolkit, RTK Query, Formik, and TDD foundations.',
+          'Built reusable table and form components for common enterprise workflow needs.',
+          'Reviewed code and mentored junior developers with a focus on testability and maintainability.'
+        ]
+      },
+      {
+        title: 'Impact',
+        points: [
+          'Reduced duplicated UI implementation across repeated workflow patterns.',
+          'Improved maintainability for future feature development.',
+          'Delivered critical application flows while maintaining feature parity with legacy screens.'
+        ]
+      }
+    ],
+    stack: ['React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'MUI', 'Formik', 'TDD']
   }
 ]

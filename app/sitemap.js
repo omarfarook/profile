@@ -1,7 +1,12 @@
 const siteUrl = 'https://omarfarook.com'
 
+const caseStudySlugs = [
+  'etrm-businesspro-frontend-foundations',
+  'react-modernization-enterprise-banking'
+]
+
 export default function sitemap() {
-  return [
+  const routes = [
     {
       url: siteUrl,
       lastModified: new Date(),
@@ -32,5 +37,15 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.7
     }
+  ]
+
+  return [
+    ...routes,
+    ...caseStudySlugs.map((slug) => ({
+      url: `${siteUrl}/work/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.75
+    }))
   ]
 }

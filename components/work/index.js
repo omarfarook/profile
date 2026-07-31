@@ -38,6 +38,11 @@ export default () => (
                         <styles.StackList aria-label={`${item.title} technology stack`}>
                             {item.stack.map((technology) => <li key={technology}>{technology}</li>)}
                         </styles.StackList>
+                        {item.slug ? (
+                            <styles.DetailLink href={`/work/${item.slug}`}>
+                                Read case study
+                            </styles.DetailLink>
+                        ) : null}
                     </styles.CaseStudyCard>
                 ))}
             </styles.CaseStudyGrid>

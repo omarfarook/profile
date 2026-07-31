@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import { LIGHT_RED, LIGHT_RED_NAV } from '../../constant/style'
 
 export const Body_Content = styled.section `
@@ -169,6 +170,27 @@ export const StackList = styled.ul `
 		line-height: 1 !important;
 		margin: 0 !important;
 		padding: .48rem .65rem;
+	}
+	@media only screen and (max-width: 1020px) {
+		grid-column: 1;
+	}
+`
+
+export const DetailLink = styled(Link) `
+	align-items: center;
+	border: 1px solid rgba(15, 51, 97, .22);
+	border-radius: 6px;
+	color: ${LIGHT_RED};
+	display: inline-flex;
+	font-size: .95rem;
+	font-weight: 500;
+	grid-column: 2;
+	justify-self: flex-start;
+	min-height: 42px;
+	padding: 0 .9rem;
+	text-decoration: none;
+	&:hover {
+		background: rgba(15, 51, 97, .06);
 	}
 	@media only screen and (max-width: 1020px) {
 		grid-column: 1;
