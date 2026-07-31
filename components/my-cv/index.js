@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React from 'react'
 import * as styles from './style'
 import {
     MAIL_ID,
@@ -10,194 +10,182 @@ import {
     NAME,
     ROLE
 } from '../../constant'
-import { trackContactLinkClick, trackExternalLinkClick } from '../../lib/gtm'
+import { trackContactLinkClick, trackExternalLinkClick, trackResumeDownload } from '../../lib/gtm'
 
 const AWS_CERT_URL = 'https://www.credly.com/badges/d9463756-5657-4d17-8605-e05ce06a50a3?source=linked_in_profile'
 
+const highlights = [
+    '10+ years building enterprise applications across banking, energy, and e-commerce.',
+    'Frontend architecture across React, Next.js, TypeScript, GraphQL, Angular, and micro-frontend platforms.',
+    'Reusable UI foundations for tables, filters, search, pagination, forms, and enterprise workflows.',
+    'Testing and quality practices with Playwright, TDD, code review, and CI/CD workflows.',
+    'Technical leadership through RFCs, guild sessions, mentoring, and cross-functional delivery.'
+]
+
+const skills = [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'GraphQL',
+    'Redux Toolkit',
+    'RTK Query',
+    'MUI',
+    'Formik',
+    'Angular',
+    'Micro-frontends',
+    'Playwright',
+    'Keycloak',
+    'OAuth2',
+    'RBAC',
+    'SAP Commerce',
+    'SSR'
+]
+
+const experience = [
+    {
+        role: 'Senior Software Engineer',
+        company: 'Flo Energy',
+        location: 'Singapore',
+        period: 'Feb 2025 - Present',
+        summary: 'Delivered customer-facing capabilities across Energy Trading and Risk Management and BusinessPro platforms.',
+        bullets: [
+            'Implemented Keycloak authentication and RBAC across enterprise workflows.',
+            'Restored reliable Playwright E2E testing in CI after repository migration.',
+            'Authored frontend architecture RFCs and shared testing practices through internal guild sessions.'
+        ]
+    },
+    {
+        role: 'Senior Software Engineer',
+        company: 'HCL Technologies, Client: Julius Baer',
+        location: 'Singapore',
+        period: 'Mar 2022 - Feb 2025',
+        summary: 'Modernized enterprise banking workflows by migrating legacy Appway experiences to React.',
+        bullets: [
+            'Built reusable UI components for tables, filtering, global search, sorting, pagination, and forms.',
+            'Established React, MUI, TypeScript, Redux Toolkit, RTK Query, Formik, and TDD foundations.',
+            'Mentored junior engineers and reviewed code with a focus on maintainability and testability.'
+        ]
+    },
+    {
+        role: 'Senior Developer',
+        company: 'Apar Technologies, Client: DBS Bank',
+        location: 'Singapore',
+        period: 'Nov 2020 - Mar 2022',
+        summary: 'Developed reusable Angular widgets and micro-frontend capabilities for banking platforms.',
+        bullets: [
+            'Designed a reusable widget framework for shared customer-management capabilities.',
+            'Built a configurable drag-and-drop form builder for dynamic business forms.',
+            'Led UI implementation across frontend developers and collaborated with product leads.'
+        ]
+    },
+    {
+        role: 'Senior Developer',
+        company: 'Aspire Digital Technologies',
+        location: 'Tamil Nadu, India',
+        period: 'Mar 2020 - Oct 2020',
+        summary: 'Led frontend development for B2B commerce platforms using Angular and SAP Commerce.',
+        bullets: [
+            'Customized Angular Spartacus storefronts on SAP Commerce Hybris.',
+            'Implemented SSR and State Transfer to improve performance and SEO.',
+            'Worked with design and project teams to deliver business requirements on schedule.'
+        ]
+    },
+    {
+        role: 'IT Analyst / System Engineer',
+        company: 'Tata Consultancy Services',
+        location: 'Chennai, India',
+        period: 'Aug 2015 - Mar 2020',
+        summary: 'Built enterprise e-commerce applications for global clients across implementation, releases, and production support.',
+        bullets: [
+            'Developed responsive, cross-browser compatible web applications.',
+            'Improved frontend performance with asynchronous CMS content rendering.',
+            'Completed a one-year onsite assignment in Australia with client stakeholders and senior management.'
+        ]
+    }
+]
+
+const downloadCv = () => {
+    trackResumeDownload({
+        section: 'my_cv'
+    })
+    window.open('/Resume-mvm.pdf', '_blank')
+}
+
 export default () => (
     <styles.Cv_Content>
-        <styles.cv_body>
-            <styles.cv_page>
-                <styles.Personal_Info>
-                    <div>
-                        <h1>{NAME}</h1>
-                        <h3>{ROLE}</h3>
-                    </div>
-                    <styles.Links>
-                        <li>Email: <a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'email', url: `mailto:${MAIL_ID}` })}>{MAIL_ID}</a></li>
-                        <li>Phone: <a href={'tel:' + PHONE_NO} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'phone', url: `tel:${PHONE_NO}` })}>{PHONE_NO}</a></li>
-                        <li>LinkedIn: <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'linkedin', url: LINKEDIN_URL })}>{LINKEDIN_NAME}</a></li>
-                    </styles.Links>
-                    <styles.cert href={AWS_CERT_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'credly', url: AWS_CERT_URL })}><img src="/aws.png" alt="dp" />
-                    </styles.cert>
-                </styles.Personal_Info>
-                <styles.Objective_Content>
-                    <h1>Professional Summary</h1>
-                    <p>Senior Software Engineer with 10+ years of experience building enterprise applications across banking, energy, and e-commerce. Specialized in scalable frontend architecture, React, Next.js, TypeScript, GraphQL, reusable UI platforms, automated testing, and maintainable application design.</p>
-                </styles.Objective_Content>
-                <styles.Strength_Container>
-                    <h1>Strengths</h1>
-                    <div>
-                        <ul>
-                            <li>Frontend architecture for enterprise applications using React, Next.js, TypeScript, GraphQL, Angular, and micro-frontend patterns.</li>
-                            <li>Reusable UI platforms including component libraries, tables, filters, global search, sorting, pagination, and form foundations.</li>
-                            <li>Automated testing and quality practices using Playwright, TDD, unit testing, code review, and CI/CD workflows.</li>
-                            <li>Authentication and authorization experience with Keycloak, OAuth2, and RBAC.</li>
-                            <li>Strong responsive design, performance, SEO, and cross-browser application delivery experience.</li>
-                            <li>Technical leadership through RFCs, internal guild sessions, mentoring, and cross-functional collaboration.</li>
-                        </ul>
-                    </div>
-                </styles.Strength_Container>
-                <styles.Experience_Content>
-                    <h1>Work Experience</h1>
-                    <div className="experience">
-                        <div><span>Senior Software Engineer </span> | Flo Energy, Singapore</div>
-                        <styles.Duration>FEB 2025 - Present</styles.Duration>
-                        <div><span>Senior Software Engineer </span> | HCL Tech Financial Service, Singapore</div>
-                        <styles.Duration>MAR 2022 - FEB 2025</styles.Duration>
-                        <div><span>Senior Developer</span> | Apar Technologies, Singapore (DBS, Singapore) </div>
-                        <styles.Duration>NOV 2021 -  MAR 2022</styles.Duration>
-                        <div><span>Technical Lead</span> | Aspire Digital Technologies, India </div>
-                        <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
-                        <div><span>IT Analyst</span> | TATA Consultancy Services, India </div>
-                        <styles.Duration>AUG 2015 - MAR 2020</styles.Duration>
-                        <p>Served as Technical Spoc at Onshore location Australia</p>
-                        <styles.Duration>AUG 2019 - NOV 2019</styles.Duration>
-                        <p>Following are accounts/client's projects that I have worked upon:</p>
-                    </div>
-                    </styles.Experience_Content>
-                    <styles.Experience_Content>
-                <div className="font-bold"><span>Senior Software Engineer</span> | Flo Energy – Singapore</div>
-                    <styles.Duration>FEB 2025 - Present</styles.Duration>
-                    <div>
-                        <ul>
-                            <li>Delivered customer-facing capabilities across Energy Trading and Risk Management and BusinessPro platforms, spanning trading workflows, pricing, authentication, and market data visualization.</li>
-                            <li>Implemented Keycloak authentication and RBAC, and restored reliable Playwright end-to-end testing in CI by resolving authentication and GraphQL mocking challenges following a repository migration.</li>
-                            <li>Authored frontend architecture RFCs to improve module boundaries, maintainability, and scalability across the frontend codebase.</li>
-                            <li>Presented frontend architecture and testing practices through engineering RFCs and internal guild sessions.</li>
-                        </ul>
-                    </div>
-                    </styles.Experience_Content>
-                    <styles.Experience_Content>
-                <div className="font-bold"><span>Senior Software Engineer</span> | Bank Julius Baer – Singapore</div>
-                    <styles.Duration>MAR 2022 - FEB 2025</styles.Duration>
-                    <div>
-                        <ul>
-                            <li>Have initiated the Project with Base Project setup includes, React, MUI, Typescript, Redux & RTK Query, Formik, and InteractionBased TDD Testing</li>
-                                <li>Identified the Reusable widgets and Created the standard widgets such as Tables with Filters, Global Search, Sorting, Pagination</li>
-                        </ul>
-                    </div>
-                    </styles.Experience_Content>
-            </styles.cv_page>
-            <styles.cv_page>
-            <styles.Experience_Content>
-                    <div>
-                        <ul>
-                            <li>Extended the Form fields such as Dropdown, Multi-select, Radio button, Checkbox, and Date-picker to work with Formik</li>
-                            <li>Peer reviewed the code with the TDD and Clean code perspective. I have onboarded 2 Junior developers to the team and Mentored
-them.</li>
-                            <li>Have contributed to 60 percent of the code base of the Repository and Delivered critical application flow in an agreed timeline</li>
-                            <li>Implemented global customization of material UI to the client's standard</li>
-                        </ul>
-                    </div>
-                    </styles.Experience_Content>
-                <styles.Experience_Content>
-                <div className="font-bold"><span>Senior Developer</span> | DBS – Singapore</div>
-                    <styles.Duration>NOV 2020 -  MAR 2022</styles.Duration>
-                    <div>
-                        <ul>
-                            <li>Widget framework development based on micro-front end, that can ensure the
-                                end-to end reusability of product based Angular components across the DBS IBG
-                                platforms.</li>
-                                <li>Handling the complexities and leading the efficient design of a single widget that
-can consume different sources and be the single source of truth to the end user. </li>
-                            <li>Driving the team of UI developers for developing the widgets based on Angular 8. </li>
-                            <li>Segregating the widgets based on the platform and collaborating with the product
-                                leads to ensure the re-usability of widgets across multiple products. </li>
-                            <li>Established appropriate review procedures to ensure consistent and high quality
-                                deliverables.</li>
-                        </ul>
-                    </div>
-                    </styles.Experience_Content>
-                <styles.Experience_Content>
-                    <div className="font-bold"><span>Sr. Lead Frontend Developer</span> | Obeikan – Saudi Arabia</div>
-                    <styles.Duration>MAR 2020 - OCT 2020</styles.Duration>
-                    <div>
-                        <ul>
-                            <li>The paramount objective is to develop Business-to-Business E-Commerce application for Manufacturing Company. </li>
-                            <li>Integrated layout architecture from SAP Commerce CMS in angular framework for home
-and static pages.</li>
-                        </ul>
-                    </div>
+        <styles.ResumeHeader>
+            <styles.Kicker>Resume</styles.Kicker>
+            <h1>{NAME}</h1>
+            <h2>{ROLE} focused on frontend architecture and enterprise applications</h2>
+            <p>Senior Software Engineer with 10+ years of experience building scalable frontend platforms across banking, energy, and e-commerce.</p>
+            <styles.ActionRow>
+                <button onClick={downloadCv}>Download PDF</button>
+                <a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'email', url: `mailto:${MAIL_ID}` })}>Email</a>
+                <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'linkedin', url: LINKEDIN_URL })}>{LINKEDIN_NAME}</a>
+            </styles.ActionRow>
+        </styles.ResumeHeader>
 
-                </styles.Experience_Content>
-                <styles.Experience_Content>
-                <ul>
-                    <li>Executes full-stack website launches specializing in front-end features, browser manipulation, and cross-browser compatibility</li>
-                    <li>Lead the projects with a team of backend engineers and QA from planning to website launch.</li>
-                            <li>Oversees creation and maintenance of front-end standard documents</li>
-                    </ul>
-                <div className="font-bold"><span>Technical Lead</span> | Leading Australian Retailer</div>
-                    <styles.Duration>Aug 2018 - MAR 2020</styles.Duration>
-                    <div>
-                        <ul>
-                            <li>Designs, develops and relaunches responsive e-commerce sites of the client</li>
-                            <li>Improved Site Performance by implementing asynchronous content rendering (CMS) by using custom reusable components in Reactjs.</li>
-                            <li>Executes full-stack website launches specializing in front-end features, browser manipulation, and cross-browser compatibility</li>
-                            <li>Managed multiple projects with a team of backend engineers and QA from planning to website launch.</li>
-                            <li>Oversees creation and maintenance of front-end standard documents</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div className="font-bold"><span>Frontend Developer</span> | Leading US Retailer</div>
-                        <styles.Duration>Jul 2017 – Jul 2018</styles.Duration>
-                        <div>
-                            <ul>
-                                <li>Design and Developed entire shopping path of Business to business application for the client.</li>
-                                <li>Integrated layout architecture in angular framework for home and PDP page .</li>
-                                <li>Implemented SSR and StateTransfer in application to support SEO     and to improve the performance of the application.</li>
-                                <li>Integrated third party libraries like Certona , Criteo in our application   for Recommended products.</li>
-                                <li>Interpreted and executed designs correctly as requested by clients</li>
-                            </ul>
-                        </div>
-                    </div>
-                </styles.Experience_Content>
-            </styles.cv_page>
-            <styles.cv_page>
-                <styles.Experience_Content>
-                    <div>
-                        <div className="font-bold"><span>Frontend Developer</span> | Leading US Retailer</div>
-                        <styles.Duration>Nov 2015 – Jun 2017</styles.Duration>
-                        <div>
-                            <ul>
-                                <li>Designs, develops and relaunches responsive B2C e-commerce sites of the client</li>
-                                <li>Developed and implemented effective solutions that are integrated to company's information technology standards</li>
-                                <li>Coordinated with team of UX designers to create new Web Content Management system</li>
-                                <li>Actively participates and engages the Software Support team in  resolving production issues</li>
-                                <li>Converted Photoshop layouts to web pages using HTML, CSS, Flex and bootstrap</li>
-                                <li>Presented web-site mock-ups to clients to give them better visual of the end product and to ensure that all parameters were met.</li>
-                                <li>Worked closely with the design team and project managers and ensured projects are delivered in a timely manner</li>
-                            </ul>
-                        </div>
-                    </div>
-                </styles.Experience_Content>
-                <styles.Education_Content>
-                <h1>Certifications</h1>
-                    <div>
-                        <span>AWS Certified Developer - Associate</span>
-                        <span>Issued Aug 2021 - Expiry Aug 2024
-                        <a href={AWS_CERT_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'credly', url: AWS_CERT_URL })}>Verify</a>
-                        </span>
-                     </div>
-                </styles.Education_Content>
-                <styles.Education_Content>
-                    <h1>Education</h1>
-                    <div>
-                        <span>Bachelor’s Degree in Computer Science and Engineering (2011-15)</span>
-                        <span>Anna University, Chennai, Tamil Nadu.</span>
-                    </div>
-                </styles.Education_Content>
-            </styles.cv_page>
-        </styles.cv_body>
+        <styles.ResumeGrid>
+            <styles.SidePanel>
+                <styles.Section>
+                    <h2>Contact</h2>
+                    <styles.ContactList>
+                        <li><span>Email</span><a href={'mailto:' + MAIL_ID} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'email', url: `mailto:${MAIL_ID}` })}>{MAIL_ID}</a></li>
+                        <li><span>Phone</span><a href={'tel:' + PHONE_NO} onClick={() => trackContactLinkClick({ section: 'my_cv', method: 'phone', url: `tel:${PHONE_NO}` })}>{PHONE_NO}</a></li>
+                        <li><span>LinkedIn</span><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'linkedin', url: LINKEDIN_URL })}>{LINKEDIN_NAME}</a></li>
+                    </styles.ContactList>
+                </styles.Section>
+
+                <styles.Section>
+                    <h2>Skills</h2>
+                    <styles.SkillList>
+                        {skills.map((skill) => <li key={skill}>{skill}</li>)}
+                    </styles.SkillList>
+                </styles.Section>
+
+                <styles.Section>
+                    <h2>Certification</h2>
+                    <p>AWS Certified Developer - Associate</p>
+                    <a href={AWS_CERT_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackExternalLinkClick({ section: 'my_cv', platform: 'credly', url: AWS_CERT_URL })}>Verify credential</a>
+                </styles.Section>
+
+                <styles.Section>
+                    <h2>Education</h2>
+                    <p>Bachelor's Degree in Computer Science and Engineering</p>
+                    <p>Anna University, Chennai</p>
+                </styles.Section>
+            </styles.SidePanel>
+
+            <main>
+                <styles.Section>
+                    <h2>Selected Impact</h2>
+                    <styles.HighlightList>
+                        {highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                    </styles.HighlightList>
+                </styles.Section>
+
+                <styles.Section>
+                    <h2>Experience</h2>
+                    <styles.ExperienceList>
+                        {experience.map((item) => (
+                            <styles.ExperienceCard key={`${item.company}-${item.period}`}>
+                                <styles.ExperienceHeader>
+                                    <div>
+                                        <h3>{item.role}</h3>
+                                        <strong>{item.company}</strong>
+                                    </div>
+                                    <span>{item.period}</span>
+                                </styles.ExperienceHeader>
+                                <styles.Location>{item.location}</styles.Location>
+                                <p>{item.summary}</p>
+                                <ul>
+                                    {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                                </ul>
+                            </styles.ExperienceCard>
+                        ))}
+                    </styles.ExperienceList>
+                </styles.Section>
+            </main>
+        </styles.ResumeGrid>
     </styles.Cv_Content>
 )

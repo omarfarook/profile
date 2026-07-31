@@ -1,239 +1,241 @@
 import styled from '@emotion/styled'
 import { LIGHT_RED } from '../../constant/style'
 
-export const cv_body = styled.div`
-    background: rgb(204,204,204);
-    z-index: 9998;
-    .font-bold {
-        font-weight: 400;
-    }
-  `
-export const cv_page = styled.div`
-    background: white;
-    display: block;
-    margin: 20px auto;
-    padding: 20px;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-    width: 21cm;
-    height: 29.7cm;
-    @media only screen and (max-width:768px) {
-        width: auto;
-        height: auto;
-        margin: 0;
-        box-shadow: none;
-        padding: 8px;
-    }
-  `
-
-
-export const Cv_Content = styled.div`
+export const Cv_Content = styled.section`
     width: 77%;
     box-sizing: border-box;
 	float: right;
-	display: flex;
-	flex-flow: column;
-    box-sizing: border-box;
-    &::before {
-        position: fixed;
-        width: 23%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: auto;
-        content: " ";
-        display: block;
-        background: url(/bg.jpg) top center no-repeat #bababa;
-        background-size: cover;
-    }
+    min-height: 100vh;
+    padding: 4.75rem 20px;
+    background: #f7f9fc;
     @media only screen and (max-width:768px) {
         width: 100%;
+        padding: 5rem 20px 3rem;
     }
 `
-export const Personal_Info = styled.section`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 8px 0;
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
 
-    h1,
-    h3 {
-        margin: 5px;
-        @media only screen and (max-width:768px) {
-            text-align: center;
-        }
-    }
+export const ResumeHeader = styled.header`
+    background: transparent;
+    max-width: 1040px;
+    margin: 0 auto 2rem;
     h1 {
         color: ${LIGHT_RED};
-        text-transform: uppercase;
-        font-size: 26px;
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 110%;
+        margin-bottom: .9rem;
     }
-    h3 {
-        text-transform: uppercase;
-        font-size: 16px;
-    }
-    span {
-        padding: 3px;
-    }
-`
-
-export const Duration = styled.span`
-    color: rgb(128, 123, 123) !important;
-    font-size: 16px;
-    margin: 5px 0;
-    display: block;
-    font-weight: 400;
-`
-export const Links = styled.ul`
-    display: flex;
-    flex-direction: column;
-    margin: 5px !important;
-    li a {
-        text-decoration: none;
+    h2 {
+        color: #26364d;
+        font-size: 1.65rem;
         font-weight: 400;
-        color: ${LIGHT_RED};
-         :visited {
-            color: ${LIGHT_RED};
-        }
+        line-height: 140%;
+        max-width: 820px;
+    }
+    p {
+        color: #42526b;
+        font-size: 1.1rem;
+        max-width: 760px;
     }
     @media only screen and (max-width:768px) {
-        text-align: center;
+        h1 {
+            font-size: 2.55rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 1rem;
+        }
     }
-    @media only screen and (min-width: 768px) {
-    // align-self: flex-end;
-}
 `
-export const Objective_Content = styled.section`
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-        padding-left: 16px;
-        text-align: justify;
-        margin: 8px;
-    }
-    h1 {
+
+export const Kicker = styled.span`
+    color: #1f7a6d;
+    display: block;
+    font-size: .85rem;
+    font-weight: 500;
+    margin-bottom: .75rem;
+    text-transform: uppercase;
+`
+
+export const ActionRow = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+    button,
+    a {
+        align-items: center;
+        background: white;
+        border: 1px solid rgba(15, 51, 97, .22);
+        border-radius: 6px;
+        box-shadow: 0 8px 18px rgba(15, 51, 97, .07);
         color: ${LIGHT_RED};
-        font-size: 22px;
-        margin: 0;
-        ul {
-            font-size: 16px;
-            line-height: 1.5;
-            padding-left: 30px;
-            text-align: justify;
-            @media only screen and (max-width: 768px) {
-                padding-left: 16px;
-            }
-        }
-    }
-`
-
-export const Title = styled.section`
-
-`
-
-export const Role = styled.div`
-    margin: 0;
-    font-size: 16px;
-`
-
-export const Experience_Content = styled.section`
-    .experience {
-        font-weight: 400;
-    }
-    div {
-        margin-top: 8px !important;
-
-        span {
-            color: ${LIGHT_RED};
-            margin-bottom: 15px;
-        }
-    }
-    p {
-        margin: 0 !important;
-        font-size: 16px;
-        margin-bottom: 16px;
-        text-align: justify;
-    }
-    h1 {
-        color: ${LIGHT_RED};
-        font-size: 23px;
-        margin: 0;
-    }
-    ul {
-        font-size: 16px;
-        line-height: 1.5;
-        padding-left: 30px;
-        text-align: justify;
-        margin: 8px;
-        @media only screen and (max-width: 768px) {
-            padding-left: 16px;
-        }
-    }
-`
-export const Education_Content = styled.section`
-    line-height: 1.5;
-    div {
+        cursor: pointer;
         display: flex;
-        flex-direction: column;
-        margin: 8px 0px;
-        font-size: 16px;
+        font-size: .95rem;
+        font-weight: 500;
+        min-height: 44px;
+        padding: 0 1rem;
+        text-decoration: none;
     }
-    h1 {
+    button:first-of-type {
+        background: ${LIGHT_RED};
+        border-color: ${LIGHT_RED};
+        color: white;
+    }
+`
+
+export const ResumeGrid = styled.div`
+    display: grid;
+    grid-template-columns: minmax(250px, .45fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    @media only screen and (max-width: 920px) {
+        grid-template-columns: 1fr;
+    }
+`
+
+export const SidePanel = styled.aside`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`
+
+export const Section = styled.section`
+    background: white;
+    border: 1px solid rgba(15, 51, 97, .14);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(15, 51, 97, .06);
+    padding: 1.25rem;
+    h2 {
         color: ${LIGHT_RED};
-        font-size: 23px;
-        margin: 0;
-        ul {
-            font-size: 16px;
-            line-height: 1.5;
-            padding-left: 30px;
-            text-align: justify;
-            @media only screen and (max-width: 768px) {
-                padding-left: 16px;
-            }
-        }
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    p {
+        color: #26364d;
+        font-size: .98rem;
+        line-height: 160%;
+        margin: 0 0 .5rem;
     }
     a {
-        margin-left: 10px;
+        color: ${LIGHT_RED};
+        font-weight: 500;
         text-decoration: none;
-        font-weight: 400;
-        color: ${LIGHT_RED};
-        :visited {
-            color: ${LIGHT_RED};
-        }
-    }
-`
-export const Strength_Container = styled.section`
-    h1 {
-        color: ${LIGHT_RED};
-        font-size: 23px;
-        margin: 0;
-    }
-    ul {
-        font-size: 16px;
-        line-height: 1.5;
-        padding-left: 30px;
-        text-align: justify;
-        @media only screen and (max-width: 768px) {
-            padding-left: 16px;
-        }
     }
 `
 
-export const cert = styled.a`
+export const ContactList = styled.ul`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: grid;
+        gap: .25rem;
+        margin-bottom: .8rem;
+    }
+    span {
+        color: #66758c;
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+    a {
+        overflow-wrap: anywhere;
+    }
+`
+
+export const SkillList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        background: rgba(15, 51, 97, .08);
+        border: 1px solid rgba(15, 51, 97, .12);
+        border-radius: 999px;
+        color: ${LIGHT_RED};
+        font-size: .82rem;
+        font-weight: 500;
+        padding: .45rem .6rem;
+    }
+`
+
+export const HighlightList = styled.ul`
+    display: grid;
+    gap: .7rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        border-left: 3px solid #1f7a6d;
+        color: #26364d;
+        line-height: 155%;
+        padding-left: .85rem;
+    }
+`
+
+export const ExperienceList = styled.div`
+    display: grid;
+    gap: 1rem;
+`
+
+export const ExperienceCard = styled.article`
+    border-top: 1px solid rgba(15, 51, 97, .12);
+    padding-top: 1rem;
+    &:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+    }
+    p {
+        color: #26364d;
+        margin: .75rem 0;
+    }
+    ul {
+        margin: 0;
+        padding-left: 1.1rem;
+    }
+    li {
+        color: #1f2937;
+        line-height: 155%;
+        margin-bottom: .45rem;
+    }
+`
+
+export const ExperienceHeader = styled.div`
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    h3 {
+        color: ${LIGHT_RED};
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: .25rem;
+    }
+    strong {
+        color: #26364d;
+        font-weight: 500;
+    }
+    span {
+        color: #66758c;
+        flex: 0 0 auto;
+        font-size: .9rem;
+    }
     @media only screen and (max-width: 768px) {
-       display: none;
+        flex-direction: column;
+        gap: .35rem;
     }
-    position: absolute;
-    cursor: pointer;
-    right: 0;
-    top: 0;
-    img {
-        height: 125px;
-        width: 125px;
-    }
+`
+
+export const Location = styled.span`
+    color: #66758c;
+    display: block;
+    font-size: .9rem;
+    margin-top: .35rem;
 `
