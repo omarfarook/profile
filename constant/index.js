@@ -58,6 +58,7 @@ export const WORK_CASE_STUDIES = [
     stack: ['React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'MUI', 'Formik']
   },
   {
+    slug: 'reusable-widget-framework-banking-platforms',
     title: 'Reusable Widget Framework for Banking Platforms',
     domain: 'Enterprise banking',
     context: 'Multiple banking teams needed reusable customer-management widgets that could work across products while consuming different data sources.',
@@ -71,6 +72,7 @@ export const WORK_CASE_STUDIES = [
     stack: ['Angular', 'AngularJS', 'Micro-frontends', 'TDD']
   },
   {
+    slug: 'commerce-frontend-performance-seo',
     title: 'Commerce Frontend Performance and SEO',
     domain: 'B2B and retail e-commerce',
     context: 'Commerce platforms needed responsive storefront delivery, SAP Commerce CMS integration, better rendering performance, and stronger SEO support.',
@@ -155,5 +157,75 @@ export const CASE_STUDY_DETAILS = [
       }
     ],
     stack: ['React', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'MUI', 'Formik', 'TDD']
+  },
+  {
+    slug: 'reusable-widget-framework-banking-platforms',
+    title: 'Reusable Widget Framework for Banking Platforms',
+    eyebrow: 'Enterprise banking',
+    summary: 'Designed shared Angular and micro-frontend widgets for customer-management workflows used across enterprise banking platforms.',
+    context: 'Multiple banking teams needed reusable customer-management capabilities that could be embedded across products while integrating with different data sources and business workflows.',
+    role: 'Senior Developer leading frontend widget design and implementation across the UI team, including reusable components, form-building capabilities, and cross-team technical alignment.',
+    sections: [
+      {
+        title: 'Problem',
+        points: [
+          'Teams were solving similar customer-management UI problems separately across banking platforms.',
+          'Widgets needed to consume data from different sources while preserving a consistent user experience.',
+          'Business users needed more flexibility to configure dynamic forms without repeated engineering work.'
+        ]
+      },
+      {
+        title: 'Approach',
+        points: [
+          'Designed a reusable widget framework based on Angular and micro-frontend architecture.',
+          'Built shared widgets for customer-management workflows with configurable data integration points.',
+          'Developed a drag-and-drop form builder so dynamic forms could be assembled with less custom UI code.'
+        ]
+      },
+      {
+        title: 'Impact',
+        points: [
+          'Reduced duplicated frontend implementation across teams with shared widget patterns.',
+          'Improved consistency for customer-management experiences across enterprise banking applications.',
+          'Helped product and engineering teams move faster on repeated workflow and form requirements.'
+        ]
+      }
+    ],
+    stack: ['Angular', 'AngularJS', 'Micro-frontends', 'Reusable widgets', 'Dynamic forms', 'TDD']
+  },
+  {
+    slug: 'commerce-frontend-performance-seo',
+    title: 'Commerce Frontend Performance and SEO',
+    eyebrow: 'B2B and retail e-commerce',
+    summary: 'Improved commerce storefront delivery through Angular Spartacus customization, SAP Commerce integration, SSR, State Transfer, and asynchronous rendering.',
+    context: 'Commerce teams needed responsive storefronts that integrated with SAP Commerce CMS while improving rendering behavior, SEO readiness, and delivery predictability across product requirements.',
+    role: 'Senior frontend engineer leading and contributing to Angular commerce delivery with design, backend, QA, and project stakeholders.',
+    sections: [
+      {
+        title: 'Problem',
+        points: [
+          'Commerce pages depended on CMS-driven content and needed stronger rendering behavior for users and search engines.',
+          'Storefront work required coordination across frontend, backend, QA, design, and project delivery timelines.',
+          'Responsive and cross-browser behavior had to remain dependable across customer-facing web surfaces.'
+        ]
+      },
+      {
+        title: 'Approach',
+        points: [
+          'Customized Angular Spartacus storefronts on SAP Commerce Hybris for B2B commerce workflows.',
+          'Implemented server-side rendering and State Transfer to improve first render behavior and SEO support.',
+          'Improved content rendering with asynchronous CMS loading patterns and responsive frontend implementation.'
+        ]
+      },
+      {
+        title: 'Impact',
+        points: [
+          'Improved storefront rendering behavior for CMS-driven commerce pages.',
+          'Strengthened SEO readiness through SSR and State Transfer implementation.',
+          'Supported predictable delivery by coordinating frontend implementation across design, backend, QA, and project stakeholders.'
+        ]
+      }
+    ],
+    stack: ['Angular', 'Spartacus', 'SAP Commerce', 'SSR', 'State Transfer', 'Responsive web']
   }
 ]
