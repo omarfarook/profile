@@ -43,6 +43,7 @@ const personStructuredData = {
 }
 
 export const metadata = {
+  metadataBase: new URL('https://omarfarook.com'),
   title: {
     default: 'Mohamed Omar Farook | Senior Software Engineer',
     template: '%s | Mohamed Omar Farook'
@@ -53,12 +54,21 @@ export const metadata = {
     description: 'Frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise application work by Mohamed Omar Farook.',
     url: 'https://omarfarook.com',
     siteName: 'Mohamed Omar Farook',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Mohamed Omar Farook - Senior Software Engineer'
+      }
+    ],
     type: 'profile'
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Mohamed Omar Farook | Senior Software Engineer',
-    description: 'Frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise application work.'
+    description: 'Frontend architecture, React, Next.js, TypeScript, GraphQL, test automation, and enterprise application work.',
+    images: ['/opengraph-image']
   },
   icons: {
     icon: [
