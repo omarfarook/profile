@@ -2,6 +2,46 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import Layout from '../components/layout'
 import './globals.css'
 
+const personStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mohamed Omar Farook',
+  url: 'https://omarfarook.com',
+  image: 'https://omarfarook.com/dp2.jpg',
+  jobTitle: 'Senior Software Engineer',
+  gender: 'Male',
+  nationality: 'Indian',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Singapore',
+    addressCountry: 'SG'
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Anna University Chennai'
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Flo Energy'
+  },
+  knowsAbout: [
+    'Frontend Architecture',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'GraphQL',
+    'Playwright',
+    'Keycloak',
+    'OAuth2',
+    'RBAC',
+    'Enterprise Application Development'
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/mohamed-omar-farook-v-m-46070473/',
+    'https://github.com/omarfarook'
+  ]
+}
+
 export const metadata = {
   title: {
     default: 'Mohamed Omar Farook | Senior Software Engineer',
@@ -45,6 +85,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+        />
       </head>
       <body suppressHydrationWarning>
         <Layout>{children}</Layout>
