@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { FORMAL_WHITE, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const MobileHeader = styled.header `
 	display: none;
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		align-items: center;
-		background: rgba(247, 249, 252, .94);
+		background: ${PAGE_BACKGROUND};
 		border-bottom: 1px solid rgba(15, 51, 97, .1);
 		box-sizing: border-box;
 		display: flex;
@@ -68,7 +68,7 @@ export const Sidenav = styled.div `
 			}
 		}
 	}
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		display: block;
 		height: 100%;
 		width: 280px;
@@ -90,7 +90,7 @@ export const Sidenav = styled.div `
 
 export const Overlay = styled.div `
 	display: none;
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		background: rgba(15, 51, 97, .32);
 		bottom: 0;
 		display: block;
@@ -143,7 +143,7 @@ export const Hamburger = styled.button `
 	line-height: 1;
 	padding: 0;
     color: ${LIGHT_RED};
-    @media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
         display: block;
     }
 `

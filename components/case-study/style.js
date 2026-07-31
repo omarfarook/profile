@@ -1,15 +1,15 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { LIGHT_RED } from '../../constant/style'
+import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const Page = styled.section`
-    width: 77%;
+    width: ${CONTENT_WIDTH};
     box-sizing: border-box;
 	float: right;
     min-height: 100vh;
     padding: 4.75rem 20px;
-    background: #f7f9fc;
-    @media only screen and (max-width:768px) {
+    background: ${PAGE_BACKGROUND};
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         width: 100%;
         padding: 5rem 20px 3rem;
     }
@@ -43,7 +43,7 @@ export const Header = styled.header`
         line-height: 175%;
         max-width: 780px;
     }
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         h1 {
             font-size: 2.25rem;
         }

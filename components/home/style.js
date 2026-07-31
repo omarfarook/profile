@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
-import { LIGHT_RED } from '../../constant/style'
+import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
-	width: 77%;
+	width: ${CONTENT_WIDTH};
 	float: right;
 	min-height: 100vh;
 	justify-content: flex-start;
@@ -12,8 +12,8 @@ export const Body_Content = styled.section `
     padding: 0 20px;
 	background:
 		linear-gradient(120deg, rgba(15, 51, 97, .06), rgba(31, 122, 109, .06)),
-		#f7f9fc;
-    @media only screen and (max-width:768px) {
+		${PAGE_BACKGROUND};
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         width: 100%
     }
 `
@@ -49,7 +49,7 @@ export const Home_Container = styled.section `
 		line-height: 170%;
 		max-width: 740px;
 	}
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
 		padding: 4.75rem 0 3rem;
 		h1 {
 			font-size: 2.55rem;
@@ -109,7 +109,7 @@ export const Btn_Group = styled.div `
 	flex-wrap: wrap;
 	gap: .85rem;
 	margin: 2.25rem 0 0;
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
 		margin-top: 1.6rem;
 	}
 `
@@ -164,7 +164,7 @@ export const ProofList = styled.ul `
 		padding-left: .9rem;
 		line-height: 150%;
 	}
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
 		gap: .65rem;
 		margin-top: 1.5rem;
 		li {

@@ -1,18 +1,18 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { LIGHT_RED, LIGHT_RED_NAV } from '../../constant/style'
+import { CONTENT_WIDTH, LIGHT_RED, LIGHT_RED_NAV, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
-	width: 77%;
+	width: ${CONTENT_WIDTH};
 	float: right;
 	min-height: 100vh;
 	justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 4.75rem 20px;
-	background: #f7f9fc;
-    @media only screen and (max-width:768px) {
+	background: ${PAGE_BACKGROUND};
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         width: 100%;
 		padding: 5rem 20px 3rem;
     }
@@ -36,7 +36,7 @@ export const Work_Container = styled.section `
 		line-height: 175%;
 		max-width: 820px;
 	}
-	@media only screen and (max-width:768px) {
+	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
 		h1 {
 			font-size: 2.25rem;
 		}
@@ -93,7 +93,7 @@ export const CaseStudyCard = styled.article `
 	@media only screen and (max-width: 1020px) {
 		grid-template-columns: 1fr;
 	}
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		gap: 1.1rem;
 		padding: 1.15rem;
 	}

@@ -1,30 +1,16 @@
 import styled from '@emotion/styled'
-import { FORMAL_WHITE, LIGHT_RED } from '../../constant/style'
+import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Body_Content = styled.section `
     display: flex;
-	width: 77%;
+	width: ${CONTENT_WIDTH};
 	float: right;
 	min-height: 100vh;
 	justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 4rem 20px;
-	@media only screen and (min-width:769px) {
-		&::before {
-			position: fixed;
-			width: 23%;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: auto;
-			content: " ";
-			display: block;
-			background: url(/bg.jpg) top center no-repeat #bababa;
-			background-size: cover;
-		}
-	}
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         width: 100%
     }
 `
@@ -50,7 +36,7 @@ export const ExpertiseList = styled.ul `
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: .75rem 1rem;
 	padding-left: 1.2rem;
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		grid-template-columns: 1fr;
 	}
 	li {
@@ -61,7 +47,7 @@ export const Links = styled.div `
 	display: flex;
 	margin-top: 20px;
     justify-content: space-between;
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
 		flex-direction: column;
 		div {
 			padding-right: 0 !important;

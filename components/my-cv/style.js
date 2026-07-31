@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
-import { LIGHT_RED } from '../../constant/style'
+import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const Cv_Content = styled.section`
-    width: 77%;
+    width: ${CONTENT_WIDTH};
     box-sizing: border-box;
 	float: right;
     min-height: 100vh;
     padding: 4.75rem 20px;
-    background: #f7f9fc;
-    @media only screen and (max-width:768px) {
+    background: ${PAGE_BACKGROUND};
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         width: 100%;
         padding: 5rem 20px 3rem;
     }
@@ -37,7 +37,7 @@ export const ResumeHeader = styled.header`
         font-size: 1.1rem;
         max-width: 760px;
     }
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
         h1 {
             font-size: 2.55rem;
         }
@@ -227,7 +227,7 @@ export const ExperienceHeader = styled.div`
         flex: 0 0 auto;
         font-size: .9rem;
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
         flex-direction: column;
         gap: .35rem;
     }

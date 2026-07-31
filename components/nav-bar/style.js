@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { FORMAL_WHITE } from '../../constant/style'
+import { FORMAL_WHITE, MOBILE_BREAKPOINT, SIDEBAR_WIDTH } from '../../constant/style'
 
 export const navContainer = styled.div`
-    width: 23%;
+    width: ${SIDEBAR_WIDTH};
     padding: 42px 28px 28px;
 	position: fixed;
 	display: flex;
@@ -40,7 +40,7 @@ export const navContainer = styled.div`
         }
     }
 	
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
             display: none;
         }
 `
