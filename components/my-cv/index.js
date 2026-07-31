@@ -111,7 +111,7 @@ const downloadCv = () => {
     window.open('/resume.pdf', '_blank')
 }
 
-export default () => (
+const MyCv = () => (
     <styles.Cv_Content>
         <styles.ResumeHeader>
             <styles.Kicker>Resume</styles.Kicker>
@@ -151,7 +151,7 @@ export default () => (
 
                 <styles.Section>
                     <h2>Education</h2>
-                    <p>Bachelor's Degree in Computer Science and Engineering</p>
+                    <p>Bachelor&apos;s Degree in Computer Science and Engineering</p>
                     <p>Anna University, Chennai</p>
                 </styles.Section>
             </styles.SidePanel>
@@ -189,3 +189,5 @@ export default () => (
         </styles.ResumeGrid>
     </styles.Cv_Content>
 )
+
+export default MyCv

@@ -1,4 +1,5 @@
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Rubik } from 'next/font/google'
 import Layout from '../components/layout'
 import './globals.css'
 
@@ -86,21 +87,23 @@ export const viewport = {
 }
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  display: 'swap'
+})
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
         />
       </head>
-      <body suppressHydrationWarning>
+      <body className={rubik.className} suppressHydrationWarning>
         <Layout>{children}</Layout>
       </body>
     </html>

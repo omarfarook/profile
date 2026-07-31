@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import * as styles from './style'
@@ -25,14 +25,14 @@ const MobileNav = () => {
         setIsNavOpened(true)
     }
 
-    const closeNav = (reason = 'manual_close') => {
+    const closeNav = useCallback((reason = 'manual_close') => {
         if (isNavOpened) {
             trackMobileNavClose({
                 reason
             })
         }
         setIsNavOpened(false)
-    }
+    }, [isNavOpened])
 
     const navigate = (label, destination) => {
         trackNavigationClick({
@@ -53,7 +53,7 @@ const MobileNav = () => {
 
         document.addEventListener('mousedown', handleClick, false)
         return () => document.removeEventListener('mousedown', handleClick, false)
-    }, [isNavOpened])
+    }, [closeNav])
 
     return (
         <section>

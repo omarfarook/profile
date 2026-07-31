@@ -4,7 +4,7 @@ import React from 'react'
 import * as styles from './style'
 import { WORK_CASE_STUDIES } from '../../constant'
 
-export default () => (
+const Work = () => (
     <styles.Body_Content>
         <styles.Work_Container>
             <styles.Kicker>Selected Work</styles.Kicker>
@@ -49,3 +49,5 @@ export default () => (
         </styles.Work_Container>
     </styles.Body_Content>
 )
+
+export default Work

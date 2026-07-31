@@ -39,7 +39,7 @@ const qualityPractices = [
     'Mentor engineers through pairing, technical reviews, and clear frontend standards.'
 ]
 
-export default () => (
+const AboutMe = () => (
     <styles.Body_Content>
         <styles.About_Container>
             <styles.Kicker>About</styles.Kicker>
@@ -83,3 +83,5 @@ export default () => (
         </styles.About_Container>
     </styles.Body_Content>
 )
+
+export default AboutMe

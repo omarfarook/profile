@@ -6,7 +6,7 @@ import * as styles from './style'
 import { NAME, HEADLINE, SUMMARY, PROOF_POINTS, AboutMe, DOWNLOAD_CV } from '../../constant'
 import { trackNavigationClick, trackResumeDownload } from '../../lib/gtm'
 
-export default () => {
+const Home = () => {
     const router = useRouter()
 
     const navigateToAbout = () => {
@@ -59,3 +59,5 @@ export default () => {
         </styles.Body_Content>
     )
 }
+
+export default Home

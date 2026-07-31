@@ -30,7 +30,7 @@ const navItems = [
     { label: 'Contact', path: '/contactme' }
 ]
 
-export default () => {
+const NavBar = () => {
     const path = usePathname()
 
     const trackNavigation = (label, destination) => {
@@ -75,3 +75,5 @@ export default () => {
         </styles.get_in_touch>
     </styles.navContainer>)
 }
+
+export default NavBar
