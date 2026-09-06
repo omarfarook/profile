@@ -26,6 +26,7 @@ const navItems = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/aboutme' },
     { label: 'Work', path: '/work' },
+    { label: 'Blog', path: '/blog' },
     { label: 'CV', path: '/mycv' },
     { label: 'Contact', path: '/contactme' }
 ]
@@ -56,7 +57,7 @@ const NavBar = () => {
         <styles.links>
             {navItems.map((item) => (
                 <li key={item.path}>
-                    <Link href={item.path} onClick={() => trackNavigation(item.label, item.path)} className={path == item.path ? "active" : ""}>
+                    <Link href={item.path} onClick={() => trackNavigation(item.label, item.path)} className={(path === item.path || (item.path !== '/' && path.startsWith(`${item.path}/`))) ? "active" : ""}>
                         {item.label}
                     </Link>
                 </li>

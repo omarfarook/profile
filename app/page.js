@@ -1,4 +1,5 @@
 import Homes from '../components/home'
+import { getPostSummaries } from '../lib/blog'
 
 export const metadata = {
   title: 'Senior Software Engineer',
@@ -8,7 +9,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="home">
-      <Homes />
+      <Homes latestPost={getPostSummaries()[0]} />
     </div>
   )
 }

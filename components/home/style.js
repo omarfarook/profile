@@ -172,3 +172,16 @@ export const ProofList = styled.ul `
 		}
 	}
 `
+
+export const LatestWriting = styled.section`
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d8dfe8;
+    max-width: 740px;
+    h2 { color: #1f7a6d; font-size: .85rem; font-weight: 500; text-transform: uppercase; margin-bottom: .75rem; }
+    h3 { font-size: 1.25rem; font-weight: 500; line-height: 1.45; }
+    p { font-size: 1rem; line-height: 1.65; margin: .75rem 0; }
+    a { color: ${LIGHT_RED}; text-underline-offset: .2em; }
+    a:hover { color: #1f7a6d; }
+    a:focus-visible { outline: 3px solid #1f7a6d; outline-offset: 4px; }
+`

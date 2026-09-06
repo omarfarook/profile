@@ -1,3 +1,5 @@
+import { getPostSummaries } from '../lib/blog'
+
 const siteUrl = 'https://omarfarook.com'
 
 const caseStudySlugs = [
@@ -41,6 +43,13 @@ export default function sitemap() {
 
   return [
     ...routes,
+    { url: `${siteUrl}/blog`, changeFrequency: 'monthly', priority: 0.8 },
+    ...getPostSummaries().map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: new Date(`${post.date}T00:00:00Z`),
+      changeFrequency: 'monthly',
+      priority: 0.75
+    })),
     ...caseStudySlugs.map((slug) => ({
       url: `${siteUrl}/work/${slug}`,
       lastModified: new Date(),
