@@ -1,23 +1,14 @@
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Page = styled.section`
-    width: ${CONTENT_WIDTH};
-    box-sizing: border-box;
-	float: right;
-    min-height: 100vh;
-    padding: 4.75rem 20px;
-    background: ${PAGE_BACKGROUND};
-    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-        width: 100%;
-        padding: 5rem 20px 3rem;
-    }
+    ${pageStyles};
 `
 
 export const Container = styled.article`
-    max-width: 980px;
-    margin: 0 auto;
+    ${containerStyles};
 `
 
 export const BackLink = styled(Link)`

@@ -1,32 +1,21 @@
 'use client'
 
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Page = styled.main`
-  box-sizing: border-box;
-  float: right;
-  width: ${CONTENT_WIDTH};
-  min-height: 100vh;
-  padding: 4.75rem 20px;
-  background: ${PAGE_BACKGROUND};
-  color: #26364d;
-  @media (max-width: ${MOBILE_BREAKPOINT}) {
-    width: 100%;
-    padding: 5.5rem 20px 3rem;
-  }
+    ${pageStyles};
+    color: #26364d;
 `
 
 export const Container = styled.div`
-  width: 100%;
-  max-width: 980px;
-  min-width: 0;
-  margin: 0 auto;
+    ${containerStyles};
   overflow-wrap: anywhere;
   a { color: ${LIGHT_RED}; text-underline-offset: .2em; }
   a:hover { color: #1f7a6d; }
   a:focus-visible { outline: 3px solid #1f7a6d; outline-offset: 4px; }
-  h1 { font-size: clamp(2rem, 3.5vw, 3.25rem); font-weight: 500; line-height: 1.2; color: ${LIGHT_RED}; margin: 1.25rem 0; }
+  h1 { font-size: clamp(2rem, 3.5vw, 3.25rem); font-weight: 500; line-height: 1.2; color: ${LIGHT_RED}; margin: 0 0 1.25rem; }
 `
 
 export const PostMeta = styled.p`

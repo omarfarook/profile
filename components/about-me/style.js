@@ -1,26 +1,15 @@
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Body_Content = styled.section `
-    display: flex;
-	width: ${CONTENT_WIDTH};
-	float: right;
-	min-height: 100vh;
-	justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box;
-    padding: 4.75rem 20px;
-	background: ${PAGE_BACKGROUND};
-    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-        width: 100%;
-		padding: 5rem 20px 3rem;
-    }
+    ${pageStyles};
 `
 
 export const About_Container = styled.section `
+    ${containerStyles};
 	display: flex;
 	flex-direction: column;
-	max-width: 980px;
     align-items: flex-start;
 	h1 {
 		color: ${LIGHT_RED};

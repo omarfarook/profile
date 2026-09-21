@@ -1,23 +1,15 @@
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Cv_Content = styled.section`
-    width: ${CONTENT_WIDTH};
-    box-sizing: border-box;
-	float: right;
-    min-height: 100vh;
-    padding: 4.75rem 20px;
-    background: ${PAGE_BACKGROUND};
-    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-        width: 100%;
-        padding: 5rem 20px 3rem;
-    }
+    ${pageStyles};
 `
 
 export const ResumeHeader = styled.header`
+    ${containerStyles};
     background: transparent;
-    max-width: 1040px;
-    margin: 0 auto 2rem;
+    margin-bottom: 2rem;
     h1 {
         color: ${LIGHT_RED};
         font-size: 3.6rem;
@@ -88,11 +80,10 @@ export const ActionRow = styled.div`
 `
 
 export const ResumeGrid = styled.div`
+    ${containerStyles};
     display: grid;
     grid-template-columns: minmax(250px, .45fr) minmax(0, 1fr);
     gap: 1.25rem;
-    max-width: 1040px;
-    margin: 0 auto;
     @media only screen and (max-width: 920px) {
         grid-template-columns: 1fr;
     }

@@ -1,31 +1,18 @@
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
 
 export const Body_Content = styled.section `
-    display: flex;
-	width: ${CONTENT_WIDTH};
-	float: right;
-	min-height: 100vh;
-	justify-content: flex-start;
-    align-items: flex-start;
-    box-sizing: border-box;
-    padding: 0 20px;
-	background:
-		linear-gradient(120deg, rgba(15, 51, 97, .06), rgba(31, 122, 109, .06)),
-		${PAGE_BACKGROUND};
-    @media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-        width: 100%
-    }
+    ${pageStyles};
+    background:
+        linear-gradient(120deg, rgba(15, 51, 97, .06), rgba(31, 122, 109, .06)),
+        ${PAGE_BACKGROUND};
 `
 
 export const Home_Container = styled.section `
-	display: flex;
-	flex-direction: column;
-	max-width: 860px;
-    align-items: flex-start;
+    ${containerStyles};
 	color: #152033;
     z-index: 9998;
-	padding: 7rem 0 4rem 4.5rem;
     display: block;
 	h1 {
 		color: ${LIGHT_RED};
@@ -50,7 +37,6 @@ export const Home_Container = styled.section `
 		max-width: 740px;
 	}
 	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-		padding: 4.75rem 0 3rem;
 		h1 {
 			font-size: 2.55rem;
 			margin-bottom: 1rem;

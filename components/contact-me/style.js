@@ -1,22 +1,13 @@
+import { pageStyles, containerStyles } from '../layout/style'
 import styled from '@emotion/styled'
-import { CONTENT_WIDTH, LIGHT_RED, MOBILE_BREAKPOINT, PAGE_BACKGROUND } from '../../constant/style'
+import { LIGHT_RED, MOBILE_BREAKPOINT } from '../../constant/style'
 
 export const Contact_Container = styled.section `
-	width: ${CONTENT_WIDTH};
-	box-sizing: border-box;
-	min-height: 100vh;
-	float: right;
-	padding: 4.75rem 20px;
-	background: ${PAGE_BACKGROUND};
-	@media only screen and (max-width:${MOBILE_BREAKPOINT}) {
-		width: 100%;
-		padding: 5rem 20px 3rem;
-	}
+    ${pageStyles};
 `
 
 export const Content = styled.div `
-	max-width: 920px;
-	margin: 0 auto;
+    ${containerStyles};
 	h1 {
 		color: ${LIGHT_RED};
 		font-size: 3.35rem;
